@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --deep-blue: #020617;     /* Navigation / Headings */
+    --dark-blue: #1E3A8A;     /* Primary Elements */
+    --vivid-blue: #3B82F6;    /* Accents */
+    --soft-blue: #93C5FD;     /* Buttons / CTA */
+    --pale-blue: #F1F5F9;     /* Backgrounds */
+
+    --primary-navy: #020617;
+    --primary-blue: #1E3A8A;
+    --brand-crimson: #3B82F6;
+    --accent-gold: #93C5FD;
+    --accent-emerald: #059669;
+    --bg-slate: #F1F5F9;
+  }
+
+  body {
+    @apply text-slate-900 font-sans antialiased selection:bg-[#3B82F6] selection:text-white;
+    background-color: #F1F5F9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Custom Gradients & Rich Institutional Utilities */
+.hero-gradient {
+  background: linear-gradient(135deg, #020617 0%, #1E3A8A 50%, #3B82F6 100%);
+}
+
+.nav-gradient {
+  background: linear-gradient(135deg, #020617 0%, #0d1b3a 40%, #1E3A8A 100%);
+}
+
+.brand-blue-gradient {
+  background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #3B82F6 100%);
+}
+
+.vivid-accent-gradient {
+  background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+}
+
+.soft-cta-gradient {
+  background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 50%, #3B82F6 100%);
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #93C5FD 0%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-glass {
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
