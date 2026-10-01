@@ -35,7 +35,7 @@ export const AdminEnquiriesPage = () => {
         <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs text-slate-700">
-              <thead className="bg-slate-900 text-white font-bold uppercase text-[11px]">
+              <thead className="bg-[#FFF9F0] text-slate-800 font-bold uppercase text-[11px]">
                 <tr>
                   <th className="p-3">Applicant Name</th>
                   <th className="p-3">Course Interest</th>
@@ -49,10 +49,10 @@ export const AdminEnquiriesPage = () => {
                 {enquiries.map((e) => (
                   <tr key={e.id} className="hover:bg-slate-50">
                     <td className="p-3 font-bold text-slate-900">{e.fullName}</td>
-                    <td className="p-3 text-blue-900 font-semibold">{e.course}</td>
+                    <td className="p-3 text-red-900 font-semibold">{e.course}</td>
                     <td className="p-3 space-y-0.5">
                       <p className="font-bold flex items-center gap-1 text-slate-800"><Phone className="w-3 h-3 text-emerald-600" /> {e.mobile}</p>
-                      <p className="text-[11px] text-slate-500 flex items-center gap-1"><Mail className="w-3 h-3 text-blue-600" /> {e.email}</p>
+                      <p className="text-[11px] text-slate-500 flex items-center gap-1"><Mail className="w-3 h-3 text-red-600" /> {e.email}</p>
                     </td>
                     <td className="p-3 font-medium">{e.hscPercentage} ({e.city})</td>
                     <td className="p-3 text-slate-600 max-w-xs">{e.message || 'No specific remark.'}</td>
@@ -64,7 +64,7 @@ export const AdminEnquiriesPage = () => {
                           e.status === 'Resolved'
                             ? 'bg-emerald-100 text-emerald-800'
                             : e.status === 'Contacted'
-                            ? 'bg-blue-100 text-blue-800'
+                            ? 'bg-red-100 text-red-800'
                             : 'bg-amber-100 text-amber-800'
                         }`}
                       >

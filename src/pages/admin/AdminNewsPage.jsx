@@ -50,7 +50,7 @@ export const AdminNewsPage = () => {
             <h2 className="text-xl font-extrabold text-slate-900">News Articles & Press Coverage</h2>
             <p className="text-xs text-slate-500">Manage news stories and student achievements.</p>
           </div>
-          <button onClick={() => setIsModalOpen(true)} className="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-900 text-white text-xs font-bold rounded-xl">
+          <button onClick={() => setIsModalOpen(true)} className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#FFF9F0] text-slate-800 text-xs font-bold rounded-xl">
             <Plus className="w-4 h-4" /> Post News Story
           </button>
         </div>
@@ -59,7 +59,7 @@ export const AdminNewsPage = () => {
           {news.map((n) => (
             <div key={n.id} className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between gap-4">
               <div className="space-y-1">
-                <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 text-[10px] font-bold">{n.category}</span>
+                <span className="px-2 py-0.5 rounded bg-red-50 text-red-900 text-[10px] font-bold">{n.category}</span>
                 <h4 className="text-sm font-bold text-slate-900 leading-tight">{n.title}</h4>
                 <p className="text-[11px] text-slate-500">{n.publishDate} • By {n.author}</p>
               </div>
@@ -71,7 +71,7 @@ export const AdminNewsPage = () => {
         </div>
 
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-[#FFF9F0]/60 backdrop-blur-sm flex items-center justify-center p-4">
             <div className="bg-white max-w-lg w-full rounded-3xl p-6 shadow-2xl space-y-4">
               <div className="flex items-center justify-between pb-3 border-b">
                 <h3 className="text-sm font-bold text-slate-900">Create News Article</h3>
@@ -124,7 +124,7 @@ export const AdminNewsPage = () => {
 
                 <div className="pt-2 flex justify-end gap-2">
                   <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 bg-slate-200 rounded-xl">Cancel</button>
-                  <button type="submit" className="px-5 py-2 bg-blue-900 text-white font-bold rounded-xl">Publish Story</button>
+                  <button type="submit" className="px-5 py-2 bg-[#FFF9F0] text-slate-800 font-bold rounded-xl">Publish Story</button>
                 </div>
               </form>
             </div>

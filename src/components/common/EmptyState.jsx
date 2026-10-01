@@ -10,7 +10,7 @@ export const EmptyState = ({
 }) => {
   return (
     <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center shadow-sm max-w-md mx-auto my-8 space-y-3">
-      <div className="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
+      <div className="w-16 h-16 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center mx-auto">
         <Icon className="w-8 h-8" />
       </div>
       <h3 className="text-lg font-bold text-slate-800">{title}</h3>
@@ -18,7 +18,7 @@ export const EmptyState = ({
       {actionText && onAction && (
         <button
           onClick={onAction}
-          className="mt-2 px-4 py-2 bg-blue-900 hover:bg-blue-800 text-white text-xs font-semibold rounded-lg shadow transition-colors"
+          className="mt-2 px-4 py-2 bg-[#FFF9F0] hover:bg-white text-slate-800 text-xs font-semibold rounded-lg shadow transition-colors"
         >
           {actionText}
         </button>

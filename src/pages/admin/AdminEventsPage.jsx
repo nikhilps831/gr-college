@@ -52,7 +52,7 @@ export const AdminEventsPage = () => {
             <h2 className="text-xl font-extrabold text-slate-900">Campus Events & Fests</h2>
             <p className="text-xs text-slate-500">Schedule upcoming workshops, hackathons, and sports meets.</p>
           </div>
-          <button onClick={() => setIsModalOpen(true)} className="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-900 text-white text-xs font-bold rounded-xl">
+          <button onClick={() => setIsModalOpen(true)} className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#FFF9F0] text-slate-800 text-xs font-bold rounded-xl">
             <Plus className="w-4 h-4" /> Create Event
           </button>
         </div>
@@ -73,7 +73,7 @@ export const AdminEventsPage = () => {
         </div>
 
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-[#FFF9F0]/60 backdrop-blur-sm flex items-center justify-center p-4">
             <div className="bg-white max-w-lg w-full rounded-3xl p-6 shadow-2xl space-y-4">
               <div className="flex items-center justify-between pb-3 border-b">
                 <h3 className="text-sm font-bold text-slate-900">Schedule New Event</h3>
@@ -139,7 +139,7 @@ export const AdminEventsPage = () => {
 
                 <div className="pt-2 flex justify-end gap-2">
                   <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 bg-slate-200 rounded-xl">Cancel</button>
-                  <button type="submit" className="px-5 py-2 bg-blue-900 text-white font-bold rounded-xl">Schedule Event</button>
+                  <button type="submit" className="px-5 py-2 bg-[#FFF9F0] text-slate-800 font-bold rounded-xl">Schedule Event</button>
                 </div>
               </form>
             </div>

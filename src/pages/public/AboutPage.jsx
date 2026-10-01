@@ -39,7 +39,7 @@ export const AboutPage = () => {
 
               <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700 font-semibold">
                 <div className="flex items-center gap-2 p-3 bg-slate-50 rounded-xl border border-slate-200">
-                  <ShieldCheck className="w-5 h-5 text-blue-700" />
+                  <ShieldCheck className="w-5 h-5 text-red-700" />
                   <span>University of Mumbai Affiliation</span>
                 </div>
                 <div className="flex items-center gap-2 p-3 bg-slate-50 rounded-xl border border-slate-200">
@@ -62,11 +62,11 @@ export const AboutPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
               to="/about/founder"
-              className="p-6 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl shadow-sm hover:shadow-md transition-all group"
+              className="p-6 bg-slate-50 hover:bg-red-50 border border-slate-200 hover:border-red-300 rounded-2xl shadow-sm hover:shadow-md transition-all group"
             >
-              <h4 className="text-base font-bold text-slate-900 group-hover:text-blue-900">Founder's Vision</h4>
+              <h4 className="text-base font-bold text-slate-900 group-hover:text-red-900">Founder's Vision</h4>
               <p className="text-xs text-slate-600 mt-2 line-clamp-2">Inspirational words from Shri G. R. Patil, Founder President.</p>
-              <div className="mt-4 text-xs font-bold text-blue-900 flex items-center gap-1">
+              <div className="mt-4 text-xs font-bold text-red-900 flex items-center gap-1">
                 <span>Read Message</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -74,11 +74,11 @@ export const AboutPage = () => {
 
             <Link
               to="/about/principal"
-              className="p-6 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl shadow-sm hover:shadow-md transition-all group"
+              className="p-6 bg-slate-50 hover:bg-red-50 border border-slate-200 hover:border-red-300 rounded-2xl shadow-sm hover:shadow-md transition-all group"
             >
-              <h4 className="text-base font-bold text-slate-900 group-hover:text-blue-900">Principal's Desk</h4>
+              <h4 className="text-base font-bold text-slate-900 group-hover:text-red-900">Principal's Desk</h4>
               <p className="text-xs text-slate-600 mt-2 line-clamp-2">Academic leadership message from Dr. Standard Authority.</p>
-              <div className="mt-4 text-xs font-bold text-blue-900 flex items-center gap-1">
+              <div className="mt-4 text-xs font-bold text-red-900 flex items-center gap-1">
                 <span>View Desk</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -86,11 +86,11 @@ export const AboutPage = () => {
 
             <Link
               to="/about/management"
-              className="p-6 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl shadow-sm hover:shadow-md transition-all group"
+              className="p-6 bg-slate-50 hover:bg-red-50 border border-slate-200 hover:border-red-300 rounded-2xl shadow-sm hover:shadow-md transition-all group"
             >
-              <h4 className="text-base font-bold text-slate-900 group-hover:text-blue-900">Management & Trust</h4>
+              <h4 className="text-base font-bold text-slate-900 group-hover:text-red-900">Management & Trust</h4>
               <p className="text-xs text-slate-600 mt-2 line-clamp-2">Trustee profiles and institutional governance structure.</p>
-              <div className="mt-4 text-xs font-bold text-blue-900 flex items-center gap-1">
+              <div className="mt-4 text-xs font-bold text-red-900 flex items-center gap-1">
                 <span>Meet Leaders</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -98,11 +98,11 @@ export const AboutPage = () => {
 
             <Link
               to="/about/vision-mission"
-              className="p-6 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl shadow-sm hover:shadow-md transition-all group"
+              className="p-6 bg-slate-50 hover:bg-red-50 border border-slate-200 hover:border-red-300 rounded-2xl shadow-sm hover:shadow-md transition-all group"
             >
-              <h4 className="text-base font-bold text-slate-900 group-hover:text-blue-900">Vision & Mission</h4>
+              <h4 className="text-base font-bold text-slate-900 group-hover:text-red-900">Vision & Mission</h4>
               <p className="text-xs text-slate-600 mt-2 line-clamp-2">Our core values, educational objectives and goals.</p>
-              <div className="mt-4 text-xs font-bold text-blue-900 flex items-center gap-1">
+              <div className="mt-4 text-xs font-bold text-red-900 flex items-center gap-1">
                 <span>Explore Values</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>

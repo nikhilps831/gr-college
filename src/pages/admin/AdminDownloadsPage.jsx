@@ -50,14 +50,14 @@ export const AdminDownloadsPage = () => {
             <h2 className="text-xl font-extrabold text-slate-900">Download Resource Management</h2>
             <p className="text-xs text-slate-500">Upload and categorize forms, syllabi, timetables, and policies.</p>
           </div>
-          <button onClick={() => setIsModalOpen(true)} className="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-900 text-white text-xs font-bold rounded-xl">
+          <button onClick={() => setIsModalOpen(true)} className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#FFF9F0] text-slate-800 text-xs font-bold rounded-xl">
             <Plus className="w-4 h-4" /> Upload Document
           </button>
         </div>
 
         <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
           <table className="w-full text-left text-xs text-slate-700">
-            <thead className="bg-slate-900 text-white font-bold uppercase text-[11px]">
+            <thead className="bg-[#FFF9F0] text-slate-800 font-bold uppercase text-[11px]">
               <tr>
                 <th className="p-3">Title</th>
                 <th className="p-3">Category</th>
@@ -70,7 +70,7 @@ export const AdminDownloadsPage = () => {
               {downloads.map((d) => (
                 <tr key={d.id} className="hover:bg-slate-50">
                   <td className="p-3 font-bold text-slate-900">{d.title}</td>
-                  <td className="p-3"><span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-bold">{d.category}</span></td>
+                  <td className="p-3"><span className="px-2 py-0.5 rounded bg-red-50 text-red-900 font-bold">{d.category}</span></td>
                   <td className="p-3 font-medium">{d.fileType} ({d.fileSize})</td>
                   <td className="p-3 text-slate-500">{d.publishedDate}</td>
                   <td className="p-3 text-right">
@@ -85,7 +85,7 @@ export const AdminDownloadsPage = () => {
         </div>
 
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-[#FFF9F0]/60 backdrop-blur-sm flex items-center justify-center p-4">
             <div className="bg-white max-w-lg w-full rounded-3xl p-6 shadow-2xl space-y-4">
               <div className="flex items-center justify-between pb-3 border-b">
                 <h3 className="text-sm font-bold text-slate-900">Upload New Resource Document</h3>
@@ -139,7 +139,7 @@ export const AdminDownloadsPage = () => {
 
                 <div className="pt-2 flex justify-end gap-2">
                   <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 bg-slate-200 rounded-xl">Cancel</button>
-                  <button type="submit" className="px-5 py-2 bg-blue-900 text-white font-bold rounded-xl">Save Document</button>
+                  <button type="submit" className="px-5 py-2 bg-[#FFF9F0] text-slate-800 font-bold rounded-xl">Save Document</button>
                 </div>
               </form>
             </div>

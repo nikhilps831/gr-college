@@ -1,24 +1,38 @@
 @import "tailwindcss";
 
+@theme {
+  /* A completely custom Light Theme incorporating Light Orange, Light Red, and Logo Colors */
+  --color-red-50: #FFF9F0;   /* Very Light Orange Background */
+  --color-red-100: #FFEBD6;  /* Soft Orange */
+  --color-red-200: #FFD6B3;  /* Peach / Light Orange */
+  --color-red-300: #FFB3B3;  /* Light Red / Pastel Red */
+  --color-red-400: #FF8080;  /* Soft Red */
+  --color-red-500: #E39B1B;  /* Logo Yellow-Orange (Main Accents) */
+  --color-red-600: #A31D24;  /* Logo Red (Buttons, primary text) */
+  --color-red-700: #88151b;  /* Darker Logo Red */
+  --color-red-800: #8FB622;  /* Injecting Logo Green as a secondary dark variant! */
+  --color-red-900: #5e1418;  /* Very Dark Red for Text */
+  --color-red-950: #33080b;
+
+  /* Overriding standard green to match the logo green perfectly */
+  --color-green-50: #F4F8EB;
+  --color-green-100: #E3EFD1;
+  --color-green-500: #8FB622;
+  --color-green-600: #7A9C1D;
+  --color-green-700: #627D17;
+}
+
 @layer base {
   :root {
-    --deep-blue: #020617;     /* Navigation / Headings */
-    --dark-blue: #1E3A8A;     /* Primary Elements */
-    --vivid-blue: #3B82F6;    /* Accents */
-    --soft-blue: #93C5FD;     /* Buttons / CTA */
-    --pale-blue: #F1F5F9;     /* Backgrounds */
-
-    --primary-navy: #020617;
-    --primary-blue: #1E3A8A;
-    --brand-crimson: #3B82F6;
-    --accent-gold: #93C5FD;
-    --accent-emerald: #059669;
-    --bg-slate: #F1F5F9;
+    --brand-red: #A31D24;
+    --brand-orange: #E39B1B;
+    --brand-green: #8FB622;
+    --bg-light-orange: #FFF9F0;
   }
 
   body {
-    @apply text-slate-900 font-sans antialiased selection:bg-[#3B82F6] selection:text-white;
-    background-color: #F1F5F9;
+    @apply text-slate-900 font-sans antialiased selection:bg-[#E39B1B] selection:text-white;
+    background-color: #FFF9F0; /* Light Orange Background for the whole site */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -32,43 +46,45 @@
   }
 }
 
-/* Custom Gradients & Rich Institutional Utilities */
+/* Custom Gradients - Light and Fresh */
 .hero-gradient {
-  background: linear-gradient(135deg, #020617 0%, #1E3A8A 50%, #3B82F6 100%);
+  background: linear-gradient(135deg, #FFF9F0 0%, #FFEBD6 50%, #FFB3B3 100%);
 }
 
 .nav-gradient {
-  background: linear-gradient(135deg, #020617 0%, #0d1b3a 40%, #1E3A8A 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #FFF9F0 100%);
 }
 
 .brand-blue-gradient {
-  background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #3B82F6 100%);
+  background: linear-gradient(135deg, #FFB3B3 0%, #FFEBD6 50%, #E3EFD1 100%);
 }
 
 .vivid-accent-gradient {
-  background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+  background: linear-gradient(135deg, #E39B1B 0%, #8FB622 100%);
 }
 
 .soft-cta-gradient {
-  background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 50%, #3B82F6 100%);
+  background: linear-gradient(135deg, #8FB622 0%, #E39B1B 100%);
 }
 
 .text-gradient-blue {
-  background: linear-gradient(135deg, #93C5FD 0%, #3B82F6 100%);
+  background: linear-gradient(135deg, #E39B1B 0%, #A31D24 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .dark-glass {
-  background: rgba(2, 6, 23, 0.95);
+  background: rgba(255, 249, 240, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(227, 155, 27, 0.2);
 }
 
 .glass-effect {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(163, 29, 36, 0.1);
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -77,16 +93,14 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #FFF9F0;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #FFB3B3;
   border-radius: 9999px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #E39B1B;
 }
-
-

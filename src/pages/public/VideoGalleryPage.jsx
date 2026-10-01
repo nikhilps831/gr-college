@@ -37,17 +37,17 @@ export const VideoGalleryPage = () => {
               >
                 <div className="relative h-64 overflow-hidden">
                   <img src={vid.thumbnail} alt={vid.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-slate-950/40 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[#FFF9F0]/40 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <Play className="w-8 h-8 fill-current ml-1" />
                     </div>
                   </div>
-                  <span className="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-slate-900/90 text-white text-[11px] font-mono">
+                  <span className="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-[#FFF9F0]/90 text-slate-800 text-[11px] font-mono">
                     {vid.duration}
                   </span>
                 </div>
                 <div className="p-4">
-                  <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 text-[10px] font-bold uppercase">{vid.category}</span>
+                  <span className="px-2 py-0.5 rounded bg-red-50 text-red-900 text-[10px] font-bold uppercase">{vid.category}</span>
                   <h4 className="text-sm font-bold text-slate-900 mt-1">{vid.title}</h4>
                 </div>
               </div>

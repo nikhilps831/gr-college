@@ -53,7 +53,7 @@ export const NaacIqacPage = ({ subSection = 'iqac' }) => {
                 onClick={() => handleTabChange(tab.key)}
                 className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
                   activeTab === tab.key
-                    ? 'bg-blue-900 text-white shadow'
+                    ? 'bg-[#FFF9F0] text-slate-800 shadow'
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                 }`}
               >
@@ -87,7 +87,7 @@ export const NaacIqacPage = ({ subSection = 'iqac' }) => {
                 <h4 className="text-base font-bold text-slate-900">IQAC Committee Composition</h4>
                 <div className="overflow-x-auto border border-slate-200 rounded-2xl">
                   <table className="w-full text-left text-xs text-slate-700">
-                    <thead className="bg-slate-900 text-white font-bold uppercase text-[11px]">
+                    <thead className="bg-[#FFF9F0] text-slate-800 font-bold uppercase text-[11px]">
                       <tr>
                         <th className="p-3">Role / Category</th>
                         <th className="p-3">Designation & Name</th>
@@ -96,7 +96,7 @@ export const NaacIqacPage = ({ subSection = 'iqac' }) => {
                     <tbody className="divide-y divide-slate-200">
                       {NAAC_DOCUMENTS.iqacOverview.composition.map((c, idx) => (
                         <tr key={idx} className="hover:bg-slate-50">
-                          <td className="p-3 font-semibold text-blue-900">{c.role}</td>
+                          <td className="p-3 font-semibold text-red-900">{c.role}</td>
                           <td className="p-3 text-slate-800">{c.name}</td>
                         </tr>
                       ))}
@@ -127,7 +127,7 @@ export const NaacIqacPage = ({ subSection = 'iqac' }) => {
                     <div className="flex flex-col gap-2 shrink-0">
                       <button
                         onClick={() => alert(`Opening AQAR ${aq.year} PDF Report`)}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold rounded-xl transition-colors"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#FFF9F0] hover:bg-white text-slate-800 text-xs font-bold rounded-xl transition-colors"
                       >
                         <FileText className="w-3.5 h-3.5" /> View PDF
                       </button>
@@ -151,7 +151,7 @@ export const NaacIqacPage = ({ subSection = 'iqac' }) => {
               <div className="space-y-6">
                 {NAAC_DOCUMENTS.bestPractices.map((bp) => (
                   <div key={bp.id} className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
-                    <h4 className="text-base font-bold text-blue-900">{bp.title}</h4>
+                    <h4 className="text-base font-bold text-red-900">{bp.title}</h4>
                     <div className="space-y-2 text-xs text-slate-700">
                       <p><strong>Objectives:</strong> {bp.objective}</p>
                       <p><strong>Context:</strong> {bp.context}</p>
@@ -178,7 +178,7 @@ export const NaacIqacPage = ({ subSection = 'iqac' }) => {
                 </div>
                 <button
                   onClick={() => alert('Downloading SSS Full Analysis Report')}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl shadow transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFF9F0] hover:bg-white text-slate-800 font-bold text-xs rounded-xl shadow transition-colors"
                 >
                   <Download className="w-4 h-4" /> Download SSS Report PDF
                 </button>
@@ -203,7 +203,7 @@ export const NaacIqacPage = ({ subSection = 'iqac' }) => {
               <div className="space-y-3">
                 {NAAC_DOCUMENTS.academicCalendar.map((item, idx) => (
                   <div key={idx} className="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-4">
-                    <div className="px-3 py-1.5 bg-blue-900 text-white text-xs font-bold rounded-lg shrink-0">
+                    <div className="px-3 py-1.5 bg-[#FFF9F0] text-slate-800 text-xs font-bold rounded-lg shrink-0">
                       {item.month}
                     </div>
                     <p className="text-xs font-medium text-slate-800">{item.event}</p>

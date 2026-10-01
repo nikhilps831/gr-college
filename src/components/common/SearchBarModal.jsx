@@ -42,11 +42,11 @@ export const SearchBarModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-900/70 backdrop-blur-sm transition-opacity">
+    <div className="fixed inset-0 z-[9999] flex items-start justify-center pt-16 sm:pt-24 px-4 bg-[#FFF9F0]/70 backdrop-blur-sm transition-opacity">
       <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[80vh] animate-fadeIn">
         {/* Search Input Bar */}
         <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center gap-3">
-          <Search className="w-5 h-5 text-blue-700 shrink-0" />
+          <Search className="w-5 h-5 text-red-700 shrink-0" />
           <input
             type="text"
             value={searchTerm}
@@ -56,12 +56,12 @@ export const SearchBarModal = ({ isOpen, onClose }) => {
             autoFocus
           />
           {searchTerm && (
-            <button onClick={() => setSearchTerm('')} className="p-1 text-slate-400 hover:text-slate-600 rounded">
+            <button onClick={() => setSearchTerm('')} className="p-1 text-slate-500 hover:text-slate-600 rounded">
               <X className="w-4 h-4" />
             </button>
           )}
           <button onClick={onClose} className="px-2.5 py-1 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-semibold rounded-lg transition-colors">
-            ESC
+            X
           </button>
         </div>
 
@@ -70,7 +70,7 @@ export const SearchBarModal = ({ isOpen, onClose }) => {
           {/* Courses Section */}
           <div>
             <div className="flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-              <BookOpen className="w-3.5 h-3.5 text-blue-600" />
+              <BookOpen className="w-3.5 h-3.5 text-red-600" />
               <span>Courses & Programs ({matchedCourses.length})</span>
             </div>
             {matchedCourses.length > 0 ? (
@@ -79,18 +79,18 @@ export const SearchBarModal = ({ isOpen, onClose }) => {
                   <button
                     key={course.id}
                     onClick={() => handleSelect(`/academics/course/${course.slug}`)}
-                    className="w-full text-left p-2.5 rounded-lg hover:bg-blue-50 border border-slate-100 hover:border-blue-200 flex items-center justify-between group transition-all"
+                    className="w-full text-left p-2.5 rounded-lg hover:bg-red-50 border border-slate-100 hover:border-red-200 flex items-center justify-between group transition-all"
                   >
                     <div>
-                      <h4 className="text-sm font-semibold text-slate-800 group-hover:text-blue-900">{course.name}</h4>
+                      <h4 className="text-sm font-semibold text-slate-800 group-hover:text-red-900">{course.name}</h4>
                       <p className="text-xs text-slate-500">{course.category} • {course.duration}</p>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-blue-700 transition-colors" />
+                    <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-red-700 transition-colors" />
                   </button>
                 ))}
               </div>
             ) : (
-              <p className="text-xs text-slate-400 italic">No matching courses found.</p>
+              <p className="text-xs text-slate-500 italic">No matching courses found.</p>
             )}
           </div>
 
@@ -112,12 +112,12 @@ export const SearchBarModal = ({ isOpen, onClose }) => {
                       <h4 className="text-sm font-semibold text-slate-800 group-hover:text-amber-900 line-clamp-1">{notice.title}</h4>
                       <p className="text-xs text-slate-500">{notice.category} • Published {notice.publishDate}</p>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-amber-700 transition-colors" />
+                    <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-amber-700 transition-colors" />
                   </button>
                 ))}
               </div>
             ) : (
-              <p className="text-xs text-slate-400 italic">No matching notices found.</p>
+              <p className="text-xs text-slate-500 italic">No matching notices found.</p>
             )}
           </div>
 
@@ -139,7 +139,7 @@ export const SearchBarModal = ({ isOpen, onClose }) => {
                       <h4 className="text-sm font-semibold text-slate-800 group-hover:text-emerald-900 line-clamp-1">{doc.title}</h4>
                       <p className="text-xs text-slate-500">{doc.category} • {doc.fileType} ({doc.fileSize})</p>
                     </div>
-                    <Download className="w-4 h-4 text-slate-400 group-hover:text-emerald-700 transition-colors" />
+                    <Download className="w-4 h-4 text-slate-500 group-hover:text-emerald-700 transition-colors" />
                   </button>
                 ))}
               </div>
@@ -148,9 +148,9 @@ export const SearchBarModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Footer info */}
-        <div className="p-3 bg-slate-100 border-t border-slate-200 text-center text-xs text-slate-500">
+        {/* <div className="p-3 bg-slate-100 border-t border-slate-200 text-center text-xs text-slate-500">
           Tip: Press <kbd className="px-1.5 py-0.5 bg-white border border-slate-300 rounded text-[10px] font-mono">ESC</kbd> to close search.
-        </div>
+        </div> */}
       </div>
     </div>
   );

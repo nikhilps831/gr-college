@@ -27,7 +27,7 @@ export const NotFoundPage = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl shadow transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFF9F0] hover:bg-white text-slate-800 font-bold text-xs rounded-xl shadow transition-colors"
             >
               <Home className="w-4 h-4" />
               <span>Go Home</span>
@@ -36,7 +36,7 @@ export const NotFoundPage = () => {
               to="/academics"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl border border-slate-300 transition-colors"
             >
-              <BookOpen className="w-4 h-4 text-blue-900" />
+              <BookOpen className="w-4 h-4 text-red-900" />
               <span>Explore Courses</span>
             </Link>
           </div>

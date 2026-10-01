@@ -23,7 +23,7 @@ export const AdminFacilitiesPage = () => {
               <h4 className="text-sm font-bold text-slate-900">{f.name}</h4>
               <p className="text-xs text-slate-500 line-clamp-2">{f.shortDescription}</p>
               <button onClick={() => alert(`Editing facility specs for ${f.name}`)} className="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-xl flex items-center justify-center gap-1.5">
-                <Edit className="w-3.5 h-3.5 text-blue-700" /> Edit Facility Specs
+                <Edit className="w-3.5 h-3.5 text-red-700" /> Edit Facility Specs
               </button>
             </div>
           ))}

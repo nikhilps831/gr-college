@@ -54,11 +54,11 @@ export const ContactPage = () => {
             {/* Left Column: Contact Cards & Info */}
             <div className="lg:col-span-5 space-y-6">
               <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-                <h3 className="text-lg font-bold text-slate-900 border-l-4 border-blue-900 pl-3">Campus Information</h3>
+                <h3 className="text-lg font-bold text-slate-900 border-l-4 border-red-900 pl-3">Campus Information</h3>
 
                 <div className="space-y-4 text-xs sm:text-sm text-slate-700">
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-red-700 shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-bold text-slate-900">Campus Address</h4>
                       <p className="text-slate-600 mt-0.5 leading-relaxed">
@@ -68,7 +68,7 @@ export const ContactPage = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Phone className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" />
+                    <Phone className="w-5 h-5 text-red-700 shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-bold text-slate-900">Telephone Lines</h4>
                       <p className="text-slate-600 mt-0.5">0251-2401122 / 2401133</p>
@@ -76,7 +76,7 @@ export const ContactPage = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" />
+                    <Mail className="w-5 h-5 text-red-700 shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-bold text-slate-900">Official Email</h4>
                       <p className="text-slate-600 mt-0.5">info@grpatilcollegedombivli.in</p>
@@ -94,14 +94,32 @@ export const ContactPage = () => {
               </div>
 
               {/* Google Maps Placeholder Frame */}
-              <div className="bg-slate-900 text-white p-6 rounded-3xl border border-slate-800 shadow-md space-y-3">
-                <div className="flex items-center gap-2 text-amber-400 font-bold text-sm">
+              <div className="bg-[#FFF9F0] text-slate-800 p-6 rounded-3xl border border-slate-800 shadow-md space-y-3">
+                <div className="flex items-center gap-2 text-[#E39B1B] font-bold text-sm">
                   <Building2 className="w-4 h-4" /> Location & Map
                 </div>
-                <div className="w-full h-48 bg-slate-800 rounded-2xl flex items-center justify-center text-slate-400 text-xs font-medium text-center p-4 border border-slate-700">
+                <div className="w-full h-48 bg-white rounded-2xl flex items-center justify-center text-slate-500 text-xs font-medium text-center p-4 border border-slate-700">
                   📍 Google Maps Directions to G.R. Patil College, Sonarpada, Dombivli East
                 </div>
               </div>
+              <div className="bg-[#FFF9F0] text-slate-800 p-6 rounded-3xl border border-slate-800 shadow-md space-y-3">
+  <div className="flex items-center gap-2 text-[#E39B1B] font-bold text-sm">
+    <Building2 className="w-4 h-4" />
+    Location & Map
+  </div>
+
+  <div className="w-full h-48 rounded-2xl overflow-hidden border border-slate-700">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4469.534591859174!2d73.1005279!3d19.197380499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be795c4c593268b%3A0xa1a93171bc454d6e!2sG.R.PATIL%20COLLEGE%20OF%20ARTS%2CSCIENCE%2CCOMMERCE%20SONARPADA%20DOMBIVLI!5e1!3m2!1sen!2sin!4v1790654455379!5m2!1sen!2sin"
+      className="w-full h-full"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="strict-origin-when-cross-origin"
+      title="G.R. Patil College Location Map"
+    />
+  </div>
+</div>
             </div>
 
             {/* Right Column: Contact Form */}
@@ -115,7 +133,7 @@ export const ContactPage = () => {
                     <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
                     <h4 className="text-lg font-bold text-emerald-950">Message Sent!</h4>
                     <p className="text-xs text-emerald-800">Thank you for getting in touch. We will respond to your email soon.</p>
-                    <button onClick={() => setIsSubmitted(false)} className="px-4 py-2 bg-emerald-700 text-white font-bold text-xs rounded-xl">
+                    <button onClick={() => setIsSubmitted(false)} className="px-4 py-2 bg-emerald-700 text-slate-800 font-bold text-xs rounded-xl">
                       Send Another Message
                     </button>
                   </div>
@@ -127,7 +145,7 @@ export const ContactPage = () => {
                         type="text"
                         {...register('name')}
                         placeholder="e.g. Priyesh Patil"
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 text-xs"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 text-xs"
                       />
                       {errors.name && <p className="text-[11px] text-rose-600 mt-1">{errors.name.message}</p>}
                     </div>
@@ -139,7 +157,7 @@ export const ContactPage = () => {
                           type="email"
                           {...register('email')}
                           placeholder="email@example.com"
-                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 text-xs"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 text-xs"
                         />
                         {errors.email && <p className="text-[11px] text-rose-600 mt-1">{errors.email.message}</p>}
                       </div>
@@ -150,7 +168,7 @@ export const ContactPage = () => {
                           type="tel"
                           {...register('mobile')}
                           placeholder="10-digit Mobile"
-                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 text-xs"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 text-xs"
                         />
                         {errors.mobile && <p className="text-[11px] text-rose-600 mt-1">{errors.mobile.message}</p>}
                       </div>
@@ -162,7 +180,7 @@ export const ContactPage = () => {
                         type="text"
                         {...register('subject')}
                         placeholder="e.g. Railway Concession Inquiry"
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 text-xs"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 text-xs"
                       />
                       {errors.subject && <p className="text-[11px] text-rose-600 mt-1">{errors.subject.message}</p>}
                     </div>
@@ -173,7 +191,7 @@ export const ContactPage = () => {
                         rows={4}
                         {...register('message')}
                         placeholder="Type your message here..."
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 text-xs"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 text-xs"
                       />
                       {errors.message && <p className="text-[11px] text-rose-600 mt-1">{errors.message.message}</p>}
                     </div>
@@ -181,7 +199,7 @@ export const ContactPage = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full flex items-center justify-center gap-2 py-3.5 bg-blue-900 hover:bg-blue-800 disabled:bg-blue-400 text-white font-bold text-xs rounded-xl shadow-md transition-colors"
+                      className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#FFF9F0] hover:bg-white disabled:bg-red-400 text-slate-800 font-bold text-xs rounded-xl shadow-md transition-colors"
                     >
                       {isSubmitting ? (
                         <>

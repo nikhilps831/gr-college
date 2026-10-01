@@ -90,7 +90,7 @@ export const AdminCoursesPage = () => {
 
           <button
             onClick={() => handleOpenModal()}
-            className="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold rounded-xl shadow transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#FFF9F0] hover:bg-white text-slate-800 text-xs font-bold rounded-xl shadow transition-colors"
           >
             <Plus className="w-4 h-4" />
             <span>Add New Course</span>
@@ -100,7 +100,7 @@ export const AdminCoursesPage = () => {
         {/* Search */}
         <div className="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm max-w-sm">
           <div className="relative">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchTerm}
@@ -115,7 +115,7 @@ export const AdminCoursesPage = () => {
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs text-slate-700">
-              <thead className="bg-slate-900 text-white font-bold uppercase text-[11px]">
+              <thead className="bg-[#FFF9F0] text-slate-800 font-bold uppercase text-[11px]">
                 <tr>
                   <th className="p-3">Course Name</th>
                   <th className="p-3">Category</th>
@@ -129,14 +129,14 @@ export const AdminCoursesPage = () => {
                 {filtered.map((c) => (
                   <tr key={c.id} className="hover:bg-slate-50">
                     <td className="p-3 font-bold text-slate-900">{c.name}</td>
-                    <td className="p-3 text-blue-900 font-semibold">{c.category}</td>
+                    <td className="p-3 text-red-900 font-semibold">{c.category}</td>
                     <td className="p-3">{c.duration}</td>
                     <td className="p-3 font-bold">{c.intake} seats</td>
                     <td className="p-3 text-emerald-700 font-semibold">{c.feesPerYear}</td>
                     <td className="p-3 text-right space-x-2">
                       <button
                         onClick={() => handleOpenModal(c)}
-                        className="p-1.5 text-blue-700 hover:bg-blue-50 rounded-lg"
+                        className="p-1.5 text-red-700 hover:bg-red-50 rounded-lg"
                         title="Edit"
                       >
                         <Edit className="w-4 h-4" />
@@ -158,11 +158,11 @@ export const AdminCoursesPage = () => {
 
         {/* Add/Edit Modal */}
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-[#FFF9F0]/60 backdrop-blur-sm flex items-center justify-center p-4">
             <div className="bg-white max-w-2xl w-full rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
-              <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
+              <div className="p-4 bg-[#FFF9F0] text-slate-800 flex items-center justify-between">
                 <h3 className="text-sm font-bold">{editingCourse ? 'Edit Course Details' : 'Add New Course'}</h3>
-                <button onClick={() => setIsModalOpen(false)} className="text-slate-400 hover:text-white">
+                <button onClick={() => setIsModalOpen(false)} className="text-slate-500 hover:text-slate-800">
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -274,7 +274,7 @@ export const AdminCoursesPage = () => {
                   >
                     Cancel
                   </button>
-                  <button type="submit" className="px-5 py-2 bg-blue-900 text-white font-bold rounded-xl">
+                  <button type="submit" className="px-5 py-2 bg-[#FFF9F0] text-slate-800 font-bold rounded-xl">
                     Save Course Record
                   </button>
                 </div>

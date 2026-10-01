@@ -22,12 +22,12 @@ export const ManagementPage = () => {
             {MANAGEMENT_TRUST.map((member, idx) => (
               <div key={idx} className="bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
+                  <div className="w-12 h-12 rounded-xl bg-[#FFF9F0] text-slate-800 flex items-center justify-center font-bold text-lg">
                     {member.name.charAt(4) || 'M'}
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-slate-900">{member.name}</h3>
-                    <p className="text-xs font-semibold text-blue-800">{member.role}</p>
+                    <p className="text-xs font-semibold text-red-800">{member.role}</p>
                   </div>
                 </div>
                 <p className="text-xs text-slate-500 font-medium">{member.qualification}</p>

@@ -53,7 +53,7 @@ export const AdmissionEnquiryForm = () => {
   return (
     <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl">
       <div className="mb-6">
-        <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-900 text-xs font-bold uppercase tracking-wider">
+        <span className="px-3 py-1 rounded-full bg-red-50 text-red-900 text-xs font-bold uppercase tracking-wider">
           Direct Admission Inquiry 2026-27
         </span>
         <h3 className="text-xl font-bold text-slate-900 mt-2">Submit Online Admission Enquiry</h3>
@@ -71,7 +71,7 @@ export const AdmissionEnquiryForm = () => {
           </p>
           <button
             onClick={() => setIsSubmitted(false)}
-            className="mt-2 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-xl shadow transition-colors"
+            className="mt-2 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-slate-800 font-bold text-xs rounded-xl shadow transition-colors"
           >
             Submit Another Enquiry
           </button>
@@ -92,7 +92,7 @@ export const AdmissionEnquiryForm = () => {
               type="text"
               {...register('fullName')}
               placeholder="e.g. Rahul Patil"
-              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 focus:bg-white text-slate-800 text-xs font-medium"
+              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 focus:bg-white text-slate-800 text-xs font-medium"
             />
             {errors.fullName && <p className="text-[11px] text-rose-600 mt-1">{errors.fullName.message}</p>}
           </div>
@@ -105,7 +105,7 @@ export const AdmissionEnquiryForm = () => {
                 type="tel"
                 {...register('mobile')}
                 placeholder="10-digit Mobile"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 focus:bg-white text-slate-800 text-xs font-medium"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 focus:bg-white text-slate-800 text-xs font-medium"
               />
               {errors.mobile && <p className="text-[11px] text-rose-600 mt-1">{errors.mobile.message}</p>}
             </div>
@@ -116,7 +116,7 @@ export const AdmissionEnquiryForm = () => {
                 type="email"
                 {...register('email')}
                 placeholder="student@example.com"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 focus:bg-white text-slate-800 text-xs font-medium"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 focus:bg-white text-slate-800 text-xs font-medium"
               />
               {errors.email && <p className="text-[11px] text-rose-600 mt-1">{errors.email.message}</p>}
             </div>
@@ -128,7 +128,7 @@ export const AdmissionEnquiryForm = () => {
               <label className="block text-slate-700 font-bold mb-1">Program Type *</label>
               <select
                 {...register('programType')}
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 focus:bg-white text-slate-800 text-xs font-medium"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 focus:bg-white text-slate-800 text-xs font-medium"
               >
                 <option value="Undergraduate">Undergraduate (UG Degree)</option>
                 <option value="Postgraduate">Postgraduate (PG Master)</option>
@@ -141,7 +141,7 @@ export const AdmissionEnquiryForm = () => {
               <label className="block text-slate-700 font-bold mb-1">Course of Interest *</label>
               <select
                 {...register('course')}
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 focus:bg-white text-slate-800 text-xs font-medium"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 focus:bg-white text-slate-800 text-xs font-medium"
               >
                 <option value="B.Sc Computer Science">B.Sc Computer Science</option>
                 <option value="B.Sc Information Technology">B.Sc Information Technology</option>
@@ -168,7 +168,7 @@ export const AdmissionEnquiryForm = () => {
                 type="text"
                 {...register('hscPercentage')}
                 placeholder="e.g. 78.5%"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 focus:bg-white text-slate-800 text-xs font-medium"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 focus:bg-white text-slate-800 text-xs font-medium"
               />
               {errors.hscPercentage && <p className="text-[11px] text-rose-600 mt-1">{errors.hscPercentage.message}</p>}
             </div>
@@ -179,7 +179,7 @@ export const AdmissionEnquiryForm = () => {
                 type="text"
                 {...register('city')}
                 placeholder="e.g. Dombivli East, Kalyan"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 focus:bg-white text-slate-800 text-xs font-medium"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 focus:bg-white text-slate-800 text-xs font-medium"
               />
               {errors.city && <p className="text-[11px] text-rose-600 mt-1">{errors.city.message}</p>}
             </div>
@@ -192,7 +192,7 @@ export const AdmissionEnquiryForm = () => {
               rows={3}
               {...register('message')}
               placeholder="Ask about fee installment, bus route, cutoff..."
-              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-blue-700 focus:bg-white text-slate-800 text-xs font-medium"
+              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl outline-none focus:border-red-700 focus:bg-white text-slate-800 text-xs font-medium"
             />
           </div>
 
@@ -200,7 +200,7 @@ export const AdmissionEnquiryForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 py-3.5 bg-blue-900 hover:bg-blue-800 disabled:bg-blue-400 text-white font-bold text-xs rounded-xl shadow-md transition-colors"
+            className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#FFF9F0] hover:bg-white disabled:bg-red-400 text-slate-800 font-bold text-xs rounded-xl shadow-md transition-colors"
           >
             {isSubmitting ? (
               <>

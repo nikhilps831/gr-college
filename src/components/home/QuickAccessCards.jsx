@@ -40,7 +40,7 @@ export const QuickAccessCards = () => {
   ];
 
   return (
-    <div className="relative -mt-10 lg:-mt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20">
+    <div className="relative -mt-24 md:-mt-32 lg:-mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20 mb-16 lg:mb-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {cards.map((card, idx) => {
           const IconComponent = card.icon;
@@ -54,28 +54,31 @@ export const QuickAccessCards = () => {
             >
               <Link
                 to={card.link}
-                className="group block bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl border border-slate-200/80 hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col justify-between"
+                className="group block bg-white rounded-[24px] p-7 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] border border-gray-100/80 transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col justify-between overflow-hidden relative"
               >
+                {/* Subtle top gradient glow on hover */}
+                <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${card.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${card.color} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
-                      <IconComponent className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-6">
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${card.color} text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500`}>
+                      <IconComponent className="w-7 h-7" />
                     </div>
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 group-hover:bg-blue-50 group-hover:text-blue-900 transition-colors">
+                    <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full bg-slate-50 text-slate-500 group-hover:bg-[#0f3b73]/5 group-hover:text-[#0f3b73] transition-colors duration-300">
                       {card.badge}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-900 transition-colors mb-2">
+                  <h3 className="text-xl font-extrabold text-[#0f3b73]  transition-colors duration-300 mb-3 tracking-tight">
                     {card.title}
                   </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  <p className="text-sm text-slate-500 leading-relaxed mb-6 font-medium">
                     {card.description}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-1 text-xs font-bold text-blue-900 group-hover:text-blue-700 pt-2 border-t border-slate-100">
+                <div className="flex items-center gap-1.5 text-[13px] font-bold text-[#0f3b73] group-hover:text-[#0f3b73] transition-colors duration-300">
                   <span>Explore Stream</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
               </Link>
             </motion.div>

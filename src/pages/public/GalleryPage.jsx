@@ -34,15 +34,15 @@ export const GalleryPage = () => {
           {/* Featured Albums */}
           <div className="mb-10">
             <h3 className="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
-              <ImageIcon className="w-5 h-5 text-blue-700" /> Featured Photo Albums
+              <ImageIcon className="w-5 h-5 text-red-700" /> Featured Photo Albums
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {GALLERY_ALBUMS.map((alb) => (
                 <div key={alb.id} className="relative h-36 rounded-2xl overflow-hidden shadow group border border-slate-200 cursor-pointer">
                   <img src={alb.cover} alt={alb.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-3 flex flex-col justify-end">
-                    <h4 className="text-xs font-bold text-white leading-tight">{alb.title}</h4>
-                    <span className="text-[10px] text-amber-300 font-semibold">{alb.count} Photos</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#FFF9F0]/80 via-transparent to-transparent p-3 flex flex-col justify-end">
+                    <h4 className="text-xs font-bold text-slate-800 leading-tight">{alb.title}</h4>
+                    <span className="text-[10px] text-[#E39B1B] font-semibold">{alb.count} Photos</span>
                   </div>
                 </div>
               ))}
@@ -57,7 +57,7 @@ export const GalleryPage = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                   selectedCategory === cat
-                    ? 'bg-blue-900 text-white shadow'
+                    ? 'bg-[#FFF9F0] text-slate-800 shadow'
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                 }`}
               >
@@ -80,10 +80,10 @@ export const GalleryPage = () => {
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                  <div className="absolute inset-0 bg-[#FFF9F0]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-slate-800">
                     <ZoomIn className="w-8 h-8" />
                   </div>
-                  <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded bg-slate-900/80 text-amber-300 text-[10px] font-bold">
+                  <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded bg-[#FFF9F0]/80 text-[#E39B1B] text-[10px] font-bold">
                     {item.category}
                   </span>
                 </div>
@@ -99,18 +99,18 @@ export const GalleryPage = () => {
 
       {/* Lightbox Modal */}
       {lightboxImage && (
-        <div className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[#FFF9F0]/90 backdrop-blur-md flex items-center justify-center p-4">
           <button
             onClick={() => setLightboxImage(null)}
-            className="absolute top-4 right-4 p-2 text-slate-300 hover:text-white bg-slate-800/80 rounded-full"
+            className="absolute top-4 right-4 p-2 text-slate-600 hover:text-slate-800 bg-white/80 rounded-full"
           >
             <X className="w-6 h-6" />
           </button>
-          <div className="max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl space-y-4 p-4 text-center">
+          <div className="max-w-4xl w-full bg-[#FFF9F0] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl space-y-4 p-4 text-center">
             <img src={lightboxImage.image} alt={lightboxImage.title} className="max-h-[70vh] w-auto mx-auto rounded-2xl object-contain" />
             <div>
-              <h3 className="text-base font-bold text-white">{lightboxImage.title}</h3>
-              <p className="text-xs text-slate-400 mt-1">{lightboxImage.caption}</p>
+              <h3 className="text-base font-bold text-slate-800">{lightboxImage.title}</h3>
+              <p className="text-xs text-slate-500 mt-1">{lightboxImage.caption}</p>
             </div>
           </div>
         </div>

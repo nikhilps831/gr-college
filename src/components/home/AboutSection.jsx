@@ -26,13 +26,13 @@ export const AboutSection = () => {
             </div>
 
             {/* Overlapping Badge */}
-            <div className="absolute -bottom-6 -right-2 sm:bottom-6 sm:-right-6 bg-[#0d2b45] text-white p-5 rounded-2xl shadow-xl border border-slate-700 max-w-xs space-y-1">
-              <div className="flex items-center gap-2 text-red-500 font-extrabold text-xl">
-                <Award className="w-6 h-6 text-amber-400" />
+            <div className="absolute -bottom-6 -right-2 sm:bottom-6 sm:-right-6 bg-white text-slate-900 p-5 rounded-[24px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 max-w-xs space-y-1">
+              <div className="flex items-center gap-2 text-[#e5322c] font-black text-xl tracking-tight">
+                <Award className="w-6 h-6 text-[#209d2e]" />
                 <span>ESTD. 1978</span>
               </div>
-              <p className="text-xs font-semibold text-white">Mumbra Shikshan Prasarak Mandal</p>
-              <p className="text-[11px] text-slate-300">Running 16 Schools, 4 Junior Colleges & 3 Degree Colleges.</p>
+              <p className="text-xs font-bold text-[#0f3b73]">Mumbra Shikshan Prasarak Mandal</p>
+              <p className="text-[11px] font-medium text-slate-500">Running 16 Schools, 4 Junior Colleges & 3 Degree Colleges.</p>
             </div>
           </motion.div>
 
@@ -45,56 +45,56 @@ export const AboutSection = () => {
             className="lg:col-span-6 space-y-6"
           >
             <div>
-              <span className="inline-block px-3 py-1 rounded-full bg-red-50 text-red-700 border border-red-200 text-xs font-bold uppercase tracking-wider mb-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e5322c]/10 text-[#e5322c] border border-[#e5322c]/20 text-[10px] font-bold uppercase tracking-wider mb-3">
                 Welcome to M.S.P. Mandal
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0f3b73] tracking-tight leading-tight">
                 G.R. Patil College of Arts, Science & Commerce, Dombivli
               </h2>
             </div>
 
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
               Mumbra Shikshan Prasarak Mandal, Dombivli, an educational institution was established in the year 1978 & was registered under Bombay Public Trust Act, 1950 & Societies Registration Act, 1960.
             </p>
 
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
               The Trust runs 16 Schools (Primary and Secondary), 4 Junior Colleges, 3 Degree Colleges located at Mumbra, Dombivli and Titwala, and one Technical College. G.R. Patil College is committed to enlightening society by providing quality knowledge and enriching social values.
             </p>
 
             {/* Key Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              <div className="flex items-center gap-2 text-slate-800 text-xs font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="flex items-center gap-2.5 text-slate-700 text-xs font-bold">
+                <CheckCircle2 className="w-4 h-4 text-[#209d2e] shrink-0" />
                 <span>Affiliated to University of Mumbai</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-800 text-xs font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0" />
+              <div className="flex items-center gap-2.5 text-slate-700 text-xs font-bold">
+                <CheckCircle2 className="w-4 h-4 text-[#209d2e] shrink-0" />
                 <span>Industrial Visits & Educational Tours</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-800 text-xs font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0" />
+              <div className="flex items-center gap-2.5 text-slate-700 text-xs font-bold">
+                <CheckCircle2 className="w-4 h-4 text-[#209d2e] shrink-0" />
                 <span>Audio Visual Tools & Seminars</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-800 text-xs font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0" />
+              <div className="flex items-center gap-2.5 text-slate-700 text-xs font-bold">
+                <CheckCircle2 className="w-4 h-4 text-[#209d2e] shrink-0" />
                 <span>Vocational & Professional Programs</span>
               </div>
             </div>
 
             {/* Buttons */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
+            <div className="pt-5 flex flex-wrap items-center gap-4">
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0d2b45] hover:bg-slate-800 text-white font-bold text-xs shadow-md transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[14px] bg-[#e5322c] hover:bg-[#c92722] text-white font-bold text-xs shadow-md transition-colors"
               >
                 <span>Read Full History</span>
-                <ArrowRight className="w-4 h-4 text-amber-400" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/about/principal"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs border border-slate-300 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[14px] bg-white hover:bg-slate-50 text-[#0f3b73] font-bold text-xs border border-[#209d2e] transition-colors shadow-sm"
               >
-                <UserCheck className="w-4 h-4 text-red-600" />
+                <UserCheck className="w-4 h-4 text-[#0f3b73]" />
                 <span>Principal's Desk</span>
               </Link>
             </div>

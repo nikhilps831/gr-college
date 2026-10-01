@@ -41,12 +41,12 @@ export const NewsDetailPage = () => {
           <Breadcrumb items={[{ label: 'News', path: '/news' }, { label: article.title }]} />
 
           <div className="space-y-4">
-            <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-900 text-xs font-bold uppercase">
+            <span className="px-3 py-1 rounded-full bg-red-50 text-red-900 text-xs font-bold uppercase">
               {article.category}
             </span>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight">{article.title}</h1>
             <div className="flex items-center gap-4 text-xs text-slate-500 font-medium">
-              <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-blue-700" /> {article.publishDate}</span>
+              <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-red-700" /> {article.publishDate}</span>
               <span className="flex items-center gap-1"><User className="w-4 h-4 text-emerald-700" /> {article.author}</span>
             </div>
           </div>
@@ -58,7 +58,7 @@ export const NewsDetailPage = () => {
           </div>
 
           <div className="pt-8 border-t border-slate-200">
-            <Link to="/news" className="inline-flex items-center gap-2 text-xs font-bold text-blue-900 hover:text-blue-700">
+            <Link to="/news" className="inline-flex items-center gap-2 text-xs font-bold text-red-900 hover:text-red-700">
               <ArrowLeft className="w-4 h-4" /> Back to All News
             </Link>
           </div>

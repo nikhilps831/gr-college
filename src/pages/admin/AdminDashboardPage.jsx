@@ -35,14 +35,14 @@ import { MOCK_ENQUIRIES, MOCK_CONTACT_MESSAGES } from '../../data/enquiriesData'
 
 export const AdminDashboardPage = () => {
   const statCards = [
-    { title: 'Total Courses', count: COURSES.length, icon: BookOpen, color: 'bg-blue-500 text-white' },
-    { title: 'Active Notices', count: NOTICES.length, icon: Bell, color: 'bg-amber-500 text-white' },
-    { title: 'Upcoming Events', count: UPCOMING_EVENTS.length, icon: Calendar, color: 'bg-purple-500 text-white' },
-    { title: 'Published Results', count: RESULTS.length, icon: Award, color: 'bg-emerald-500 text-white' },
-    { title: 'Downloads Catalog', count: DOWNLOADS.length, icon: Download, color: 'bg-teal-500 text-white' },
-    { title: 'Gallery Albums', count: GALLERY_ALBUMS.length, icon: Image, color: 'bg-indigo-500 text-white' },
-    { title: 'Admission Enquiries', count: MOCK_ENQUIRIES.length, icon: MessageSquare, color: 'bg-rose-500 text-white' },
-    { title: 'Contact Messages', count: MOCK_CONTACT_MESSAGES.length, icon: Mail, color: 'bg-slate-700 text-white' }
+    { title: 'Total Courses', count: COURSES.length, icon: BookOpen, color: 'bg-red-500 text-slate-800' },
+    { title: 'Active Notices', count: NOTICES.length, icon: Bell, color: 'bg-amber-500 text-slate-800' },
+    { title: 'Upcoming Events', count: UPCOMING_EVENTS.length, icon: Calendar, color: 'bg-purple-500 text-slate-800' },
+    { title: 'Published Results', count: RESULTS.length, icon: Award, color: 'bg-emerald-500 text-slate-800' },
+    { title: 'Downloads Catalog', count: DOWNLOADS.length, icon: Download, color: 'bg-teal-500 text-slate-800' },
+    { title: 'Gallery Albums', count: GALLERY_ALBUMS.length, icon: Image, color: 'bg-indigo-500 text-slate-800' },
+    { title: 'Admission Enquiries', count: MOCK_ENQUIRIES.length, icon: MessageSquare, color: 'bg-rose-500 text-slate-800' },
+    { title: 'Contact Messages', count: MOCK_CONTACT_MESSAGES.length, icon: Mail, color: 'bg-slate-700 text-slate-800' }
   ];
 
   // Chart Data Preparation
@@ -164,7 +164,7 @@ export const AdminDashboardPage = () => {
           <h3 className="text-sm font-bold text-slate-900">Recent Student Admission Enquiries</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs text-slate-700">
-              <thead className="bg-slate-900 text-white font-bold uppercase text-[11px]">
+              <thead className="bg-[#FFF9F0] text-slate-800 font-bold uppercase text-[11px]">
                 <tr>
                   <th className="p-3">Student Name</th>
                   <th className="p-3">Course</th>
@@ -177,7 +177,7 @@ export const AdminDashboardPage = () => {
                 {MOCK_ENQUIRIES.map((enq) => (
                   <tr key={enq.id} className="hover:bg-slate-50">
                     <td className="p-3 font-bold text-slate-900">{enq.fullName}</td>
-                    <td className="p-3 text-blue-900 font-semibold">{enq.course}</td>
+                    <td className="p-3 text-red-900 font-semibold">{enq.course}</td>
                     <td className="p-3 text-slate-600">{enq.mobile} • {enq.email}</td>
                     <td className="p-3 font-bold text-slate-800">{enq.hscPercentage}</td>
                     <td className="p-3">

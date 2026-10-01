@@ -10,18 +10,18 @@ export const StatsCounter = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 text-white py-14 border-y border-blue-900/60">
+    <section className="bg-[#ffcccc] py-16 border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, idx) => {
             const IconComp = stat.icon;
             return (
-              <div key={idx} className="text-center space-y-2">
-                <div className="w-12 h-12 rounded-2xl bg-amber-400/10 text-amber-400 border border-amber-400/30 flex items-center justify-center mx-auto shadow-inner">
-                  <IconComp className="w-6 h-6" />
+              <div key={idx} className="text-center space-y-3 bg-white p-6 rounded-[24px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-50 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-[#e5322c]/10 text-[#e5322c] flex items-center justify-center mx-auto">
+                  <IconComp className="w-7 h-7" />
                 </div>
-                <div className="text-3xl sm:text-4xl font-black text-white tracking-tight">{stat.value}</div>
-                <div className="text-xs sm:text-sm font-medium text-slate-300">{stat.label}</div>
+                <div className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">{stat.value}</div>
+                <div className="text-[13px] font-bold text-slate-500 uppercase tracking-wider">{stat.label}</div>
               </div>
             );
           })}

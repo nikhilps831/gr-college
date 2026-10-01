@@ -16,7 +16,7 @@ export const AdminGalleryPage = () => {
             <h2 className="text-xl font-extrabold text-slate-900">Gallery & Media Manager</h2>
             <p className="text-xs text-slate-500">Organize event photo albums and campus infrastructure photography.</p>
           </div>
-          <button onClick={() => alert('New album creation modal launched!')} className="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-900 text-white text-xs font-bold rounded-xl">
+          <button onClick={() => alert('New album creation modal launched!')} className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#FFF9F0] text-slate-800 text-xs font-bold rounded-xl">
             <Plus className="w-4 h-4" /> Create Album
           </button>
         </div>

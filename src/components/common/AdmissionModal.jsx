@@ -24,32 +24,36 @@ export const AdmissionModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-[#FFF9F0]/80 backdrop-blur-sm animate-fadeIn" onClick={onClose}>
       <div
         className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Top Banner */}
-        <div className="bg-gradient-to-r from-[#003366] via-[#002147] to-red-700 text-white p-6 relative">
+        <div className="bg-gradient-to-r from-orange-500 to-amber-500 text-white p-6 relative overflow-hidden">
+          {/* Decorative background shapes */}
+          <div className="absolute -top-10 -right-10 w-32 h-32 bg-white opacity-10 rounded-full blur-2xl pointer-events-none"></div>
+          <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-white opacity-10 rounded-full blur-xl pointer-events-none"></div>
+          
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-white/80 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors"
+            className="absolute top-4 right-4 text-white/80 hover:text-white p-1.5 rounded-full hover:bg-white/20 transition-colors z-[60] cursor-pointer"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
 
-          <div className="flex items-center gap-2 mb-2">
-            <span className="bg-amber-400 text-slate-950 font-black text-[10px] uppercase px-2.5 py-0.5 rounded-full tracking-wider flex items-center gap-1">
-              <Sparkles className="w-3 h-3" /> Admission Open 2026-27
+          <div className="flex items-center gap-2 mb-3 relative z-10">
+            <span className="bg-white/20 backdrop-blur-sm border border-white/30 text-white font-extrabold text-[10px] uppercase px-3 py-1 rounded-full tracking-wider flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-amber-200" /> Admission Open 2026-27
             </span>
           </div>
-          <h3 className="text-xl font-black tracking-tight text-white flex items-center gap-2">
-            <GraduationCap className="w-6 h-6 text-amber-300" />
-            Online Admission Quick Inquiry
+          <h3 className="text-2xl font-black tracking-tight text-white flex items-center gap-2.5 relative z-10">
+            <GraduationCap className="w-7 h-7 text-white" />
+            Online Admission Inquiry
           </h3>
-          <p className="text-xs text-slate-200 mt-1">
-            G.R. Patil College of Arts, Science & Commerce (Affiliated to Mumbai University)
+          <p className="text-[13px] font-medium text-white/90 mt-1.5 relative z-10">
+            G.R. Patil College of Arts, Science & Commerce
           </p>
         </div>
 
@@ -77,7 +81,7 @@ export const AdmissionModal = ({ isOpen, onClose }) => {
                   placeholder="e.g. Rahul Sharma"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#003366] focus:border-transparent outline-none transition-all"
+                  className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                 />
               </div>
 
@@ -92,7 +96,7 @@ export const AdmissionModal = ({ isOpen, onClose }) => {
                     placeholder="+91 9876543210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#003366] focus:border-transparent outline-none transition-all"
+                    className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                   />
                 </div>
 
@@ -105,7 +109,7 @@ export const AdmissionModal = ({ isOpen, onClose }) => {
                     placeholder="name@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#003366] focus:border-transparent outline-none transition-all"
+                    className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                   />
                 </div>
               </div>
@@ -117,7 +121,7 @@ export const AdmissionModal = ({ isOpen, onClose }) => {
                 <select
                   value={formData.course}
                   onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                  className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#003366] focus:border-transparent outline-none transition-all"
+                  className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
                 >
                   <optgroup label="Degree Courses (University of Mumbai)">
                     <option value="BMS">BMS - Bachelor of Management Studies</option>
@@ -147,19 +151,19 @@ export const AdmissionModal = ({ isOpen, onClose }) => {
                   placeholder="Ask any question regarding fee structure, eligibility, or documentation..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#003366] focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all resize-none"
                 />
               </div>
 
               <div className="pt-2 flex items-center justify-between gap-3">
                 <div className="text-[11px] text-slate-500 flex items-center gap-1">
-                  <Phone className="w-3.5 h-3.5 text-red-600" />
+                  <Phone className="w-3.5 h-3.5 text-orange-500" />
                   <span>Helpline: +91 9082629158</span>
                 </div>
 
                 <button
                   type="submit"
-                  className="px-5 py-2.5 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+                  className="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-[13px] rounded-xl shadow-[0_4px_15px_rgba(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgba(249,115,22,0.4)] transition-all flex items-center gap-2 -translate-y-0.5"
                 >
                   <span>Submit Inquiry</span>
                   <Send className="w-4 h-4" />

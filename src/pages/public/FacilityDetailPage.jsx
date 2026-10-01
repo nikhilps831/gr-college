@@ -75,9 +75,9 @@ export const FacilityDetailPage = () => {
                     <Link
                       key={f.id}
                       to={`/campus/facilities/${f.slug}`}
-                      className="block p-3 bg-white rounded-xl border border-slate-200 hover:border-blue-300 transition-all group"
+                      className="block p-3 bg-white rounded-xl border border-slate-200 hover:border-red-300 transition-all group"
                     >
-                      <h5 className="text-xs font-bold text-slate-800 group-hover:text-blue-900">{f.name}</h5>
+                      <h5 className="text-xs font-bold text-slate-800 group-hover:text-red-900">{f.name}</h5>
                       <p className="text-[10px] text-slate-500 line-clamp-1 mt-1">{f.shortDescription}</p>
                     </Link>
                   ))}

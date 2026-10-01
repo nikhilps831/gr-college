@@ -45,7 +45,7 @@ export const AdminSettingsPage = () => {
           <div className="pt-4 border-t flex justify-end">
             <button
               onClick={() => alert('CMS settings saved successfully!')}
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-900 text-white font-bold text-xs rounded-xl shadow"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#FFF9F0] text-slate-800 font-bold text-xs rounded-xl shadow"
             >
               <Save className="w-4 h-4" /> Save Settings
             </button>

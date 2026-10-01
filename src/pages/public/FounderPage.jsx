@@ -26,7 +26,7 @@ export const FounderPage = () => {
                 className="w-48 h-56 object-cover rounded-2xl mx-auto shadow-md border-4 border-white"
               />
               <h3 className="text-xl font-bold text-slate-900 mt-4">{FOUNDER_INFO.name}</h3>
-              <p className="text-xs font-semibold text-blue-900">{FOUNDER_INFO.title}</p>
+              <p className="text-xs font-semibold text-red-900">{FOUNDER_INFO.title}</p>
               <p className="text-[11px] text-slate-500 mt-1">{FOUNDER_INFO.organization}</p>
             </div>
 
@@ -39,9 +39,9 @@ export const FounderPage = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-6 bg-blue-50 border border-blue-200 rounded-2xl space-y-2">
-              <div className="flex items-center gap-2 text-blue-900 font-bold text-base">
-                <Target className="w-5 h-5 text-blue-700" />
+            <div className="p-6 bg-red-50 border border-red-200 rounded-2xl space-y-2">
+              <div className="flex items-center gap-2 text-red-900 font-bold text-base">
+                <Target className="w-5 h-5 text-red-700" />
                 <span>Our Founder's Vision</span>
               </div>
               <p className="text-xs text-slate-700 leading-relaxed">{FOUNDER_INFO.vision}</p>

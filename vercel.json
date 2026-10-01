@@ -1,4 +1,5 @@
 {
+  "name": "gr-patil-college",
   "rewrites": [
     {
       "source": "/(.*)",

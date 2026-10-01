@@ -26,12 +26,12 @@ export const AdminHeader = ({ onOpenMobileSidebar, title = 'Dashboard Overview' 
           className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-lg border border-slate-300 transition-colors"
           title="View live website in new tab"
         >
-          <ExternalLink className="w-3.5 h-3.5 text-blue-700" />
+          <ExternalLink className="w-3.5 h-3.5 text-red-700" />
           <span className="hidden sm:inline">View Public Website</span>
         </Link>
 
         <div className="flex items-center gap-2 pl-3 border-l border-slate-200">
-          <div className="w-8 h-8 rounded-full bg-blue-900 text-white font-bold flex items-center justify-center text-xs shadow">
+          <div className="w-8 h-8 rounded-full bg-[#FFF9F0] text-slate-800 font-bold flex items-center justify-center text-xs shadow">
             AD
           </div>
           <div className="hidden md:block text-left text-xs">

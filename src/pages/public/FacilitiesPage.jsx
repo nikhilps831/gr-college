@@ -37,7 +37,7 @@ export const FacilitiesPage = () => {
                   </div>
 
                   <div className="p-5 space-y-3">
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-900 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-red-900 transition-colors">
                       {facility.name}
                     </h3>
                     <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
@@ -58,7 +58,7 @@ export const FacilitiesPage = () => {
                 <div className="p-5 pt-0 mt-2 border-t border-slate-100">
                   <Link
                     to={`/campus/facilities/${facility.slug}`}
-                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-900 font-bold text-xs rounded-xl transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 bg-red-50 hover:bg-red-100 text-red-900 font-bold text-xs rounded-xl transition-colors"
                   >
                     <span>View Facility Specs</span>
                     <ArrowRight className="w-3.5 h-3.5" />

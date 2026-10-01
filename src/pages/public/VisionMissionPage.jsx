@@ -19,14 +19,14 @@ export const VisionMissionPage = () => {
 
           <div className="space-y-8">
             {/* Vision Card */}
-            <div className="bg-gradient-to-br from-blue-950 to-slate-900 text-white rounded-3xl p-8 border border-blue-900 shadow-xl space-y-4">
+            <div className="bg-gradient-to-whiter from-red-950 to-slate-900 text-slate-800 rounded-3xl p-8 border border-red-900 shadow-xl space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center font-bold">
                   <Target className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold">Our Vision</h3>
               </div>
-              <p className="text-sm text-slate-200 leading-relaxed font-medium">
+              <p className="text-sm text-slate-700 leading-relaxed font-medium">
                 To emerge as a premier higher educational institution in the region, recognized for academic excellence, digital skill development, research initiatives, and producing ethical, responsible global citizens.
               </p>
             </div>
@@ -34,7 +34,7 @@ export const VisionMissionPage = () => {
             {/* Mission Card */}
             <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold">
+                <div className="w-12 h-12 rounded-xl bg-emerald-600 text-slate-800 flex items-center justify-center font-bold">
                   <Heart className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">Our Mission</h3>

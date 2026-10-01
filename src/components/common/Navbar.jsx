@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Menu, ChevronDown, Phone, MapPin, Flame, ArrowRight, Sparkles } from 'lucide-react';
+import { Search, Menu, ChevronDown, Phone, MapPin, Home, GraduationCap, ArrowRight } from 'lucide-react';
 import { MobileDrawer } from './MobileDrawer';
 import { SearchBarModal } from './SearchBarModal';
 import { AdmissionModal } from './AdmissionModal';
@@ -14,259 +14,251 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 90);
+      setIsSticky(window.scrollY > 100);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location.pathname]);
-
-  const isActive = (path) => {
-    if (path === '/') return location.pathname === '/';
-    return location.pathname.startsWith(path);
-  };
+  const isActive = (path) => location.pathname.startsWith(path);
 
   return (
     <>
-      {/* College Main Header Section (Clean White Background) */}
-      <div className="bg-white border-b border-slate-200 py-3.5 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      {/* Top Announcement Marquee */}
+      <div className="bg-gradient-to-r from-[#0a2850] via-[#0f3b73] to-[#0a2850] text-white relative z-50 border-b border-white/10 shadow-inner">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center overflow-hidden">
+          <div className="flex items-center gap-2 bg-[#e5322c] text-white font-black px-3 py-1 rounded-sm text-[11px] uppercase tracking-widest shrink-0 mr-4 shadow-[0_0_10px_rgba(229,50,44,0.4)] z-10 relative">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+            </span>
+            Latest Updates
+          </div>
+          
+          {/* eslint-disable-next-line jsx-a11y/no-distracting-elements */}
+          <marquee className="text-[13.5px] font-bold tracking-wide text-white/90 drop-shadow-sm flex items-center" scrollamount="5" onMouseOver={(e) => e.target.stop()} onMouseOut={(e) => e.target.start()}>
+            <span className="inline-block mr-16 hover:text-white transition-colors cursor-pointer">
+              <span className="text-[#e39b1b] mr-2">🌟</span> 
+              Admissions Open for Academic Year 2026-27 for Junior College & Degree Courses (B.Sc, BMS, B.Com, BAF, M.Sc, M.Com). <span className="text-[#e39b1b] underline underline-offset-2 ml-1">Apply Now!</span>
+            </span>
+            <span className="inline-block mr-16 hover:text-white transition-colors cursor-pointer">
+              <span className="text-emerald-400 mr-2">📅</span> 
+              Form Submission Date Extended. Check the admissions portal for more details.
+            </span>
+            <span className="inline-block mr-16 hover:text-white transition-colors cursor-pointer">
+              <span className="text-[#93c5fd] mr-2">🏆</span> 
+              Congratulations to our students for outstanding results in the University Examinations!
+            </span>
+          </marquee>
+        </div>
+      </div>
+
+      {/* Main Header Section */}
+      <div className="bg-white pt-4 pb-12 sm:pb-14 lg:pb-16 px-4 sm:px-6 lg:px-8 relative z-40">
+        <div className="max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-between gap-6">
           {/* Logo & Official Title */}
-          <Link to="/" className="flex items-center gap-3.5 group">
+          <Link to="/" className="flex items-center gap-4 group">
             <img
               src="https://www.grpatilcollegedombivli.in/assets/img/grpclogo.png"
               alt="G.R. Patil College Logo"
-              className="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition-transform"
+              className="h-16 md:h-20 w-auto object-contain"
             />
             <div className="flex flex-col">
-              <span className="text-[10px] sm:text-[11px] font-bold text-red-600 uppercase tracking-widest">
-                M.S.P. MANDAL (REGD), MUMBRA (THANE). ESTD. 1978
+              <span className="text-[10px] md:text-[11px] font-bold text-[#e65c00] tracking-wide uppercase">
+                M.S.P. MANDAL (REGD), MUMBAI, (THANE), ESTD. 1978
               </span>
-              <h1 className="text-lg sm:text-2xl font-black text-slate-900 tracking-tight leading-none group-hover:text-[#003366] transition-colors mt-0.5">
+              <h1 className="text-2xl md:text-3xl font-black text-[#0f3b73] tracking-tight leading-none mt-1">
                 G.R. PATIL COLLEGE
               </h1>
-              <span className="text-[11px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider mt-0.5">
+              <span className="text-[11px] md:text-sm font-bold text-[#0f3b73] tracking-wide mt-1">
                 OF ARTS, SCIENCE & COMMERCE, BMS & JUNIOR COLLEGE DOMBIVLI
               </span>
-              <span className="text-[10px] font-bold text-[#003366] uppercase tracking-widest mt-0.5">
-                Affiliated to University of Mumbai
+              <span className="text-[10px] md:text-[11px] font-bold text-[#2563eb] tracking-widest uppercase mt-0.5">
+                AFFILIATED TO UNIVERSITY OF MUMBAI
               </span>
             </div>
           </Link>
 
           {/* Right Header Contact & Info Box */}
-          <div className="hidden lg:flex items-center gap-6 text-xs text-slate-600">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full bg-blue-50 text-[#003366] border border-blue-100 flex items-center justify-center font-bold">
-                <Phone className="w-4 h-4" />
-              </div>
-              <div className="text-left">
-                <span className="block text-[10px] font-bold text-slate-400 uppercase">Admission Contact</span>
-                <a href="tel:9082629158" className="font-extrabold text-slate-900 hover:text-red-600 transition-colors">
-                  +91 9082629158 / 9324142988
-                </a>
-              </div>
-            </div>
+          <div className="hidden xl:flex items-center gap-6">
 
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full bg-red-50 text-red-600 border border-red-100 flex items-center justify-center font-bold">
+
+
+
+            {/* Campus Location */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-orange-50 text-[#e65c00] flex items-center justify-center shrink-0">
                 <MapPin className="w-4 h-4" />
               </div>
-              <div className="text-left">
-                <span className="block text-[10px] font-bold text-slate-400 uppercase">Campus Location</span>
-                <span className="font-bold text-slate-800">Sonarpada, Dombivli (East)</span>
+              <div className="flex flex-col">
+                <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Campus Location</span>
+                <span className="text-sm font-bold text-[#0f3b73]">Sonarpada, Dombivli (East)</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Sticky Main Navigation Bar - Deep Blue & Dark Blue Gradients (#020617 -> #1E3A8A) */}
-      <header
-        className={`w-full bg-gradient-to-r from-[#020617] via-[#091533] to-[#1E3A8A] text-white transition-all duration-300 z-40 ${isSticky ? 'sticky top-0 shadow-2xl bg-[#020617]/95 backdrop-blur-md border-b border-[#3B82F6]/40' : ''
-          }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-13">
-            {/* Desktop Navigation Links */}
-            <nav className="hidden xl:flex items-center gap-1 font-bold text-[11px] uppercase tracking-wider text-slate-100">
+      {/* Zero-height wrapper to position the floating nav exactly on the seam */}
+      <div className="relative w-full h-0 z-50">
+        <div className={`transition-all duration-300 ${isSticky ? 'fixed top-0 left-0 w-full  translate-y-0' : 'absolute left-0 right-0 w-full xl:px-8 transform -translate-y-1/2'}`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
+            <nav className={`bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between xl:justify-start border border-gray-100 p-2 ${isSticky ? 'rounded-2xl' : 'rounded-[36px]'}`}>
+
+              {/* Desktop Sticky Logo */}
               <Link
                 to="/"
-                className={`px-3 py-2.5 rounded-md transition-all ${isActive('/') && location.pathname === '/'
-                    ? 'bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] text-white shadow-md border border-[#93C5FD]/30'
-                    : 'hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD]'
+                className={`hidden xl:flex items-center gap-2 transition-all duration-500 overflow-hidden whitespace-nowrap ${isSticky ? 'max-w-[300px] opacity-100 ml-4 mr-2' : 'max-w-0 opacity-0 mx-0'
                   }`}
               >
-                Home
+                <img
+                  src="https://www.grpatilcollegedombivli.in/assets/img/grpclogo.png"
+                  alt="Logo"
+                  className="h-9 w-auto object-contain shrink-0"
+                />
+                <span className="text-[14px] font-black text-[#0f3b73] tracking-tight leading-none">
+                  G.R. PATIL COLLEGE
+                </span>
               </Link>
 
-              {/* About Dropdown */}
-              <div className="relative group py-2">
-                <button className="flex items-center gap-1 px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                  <span>About</span>
-                  <ChevronDown className="w-3.5 h-3.5" />
-                </button>
-                <div className="absolute left-0 top-full hidden group-hover:block w-56 bg-white text-slate-800 rounded-xl shadow-2xl border border-slate-200 py-2 z-50">
-                  <Link to="/about" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A] font-bold">About Institute</Link>
-                  <Link to="/about/founder" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Founder's Message</Link>
-                  <Link to="/about/management" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Management</Link>
-                  <Link to="/about/principal" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Principal's Desk</Link>
-                  <Link to="/about/vision-mission" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Vision & Mission</Link>
-                </div>
-              </div>
-
-              {/* Academics Dropdown */}
-              <div className="relative group py-2">
-                <button className="flex items-center gap-1 px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                  <span>Academics</span>
-                  <ChevronDown className="w-3.5 h-3.5" />
-                </button>
-                <div className="absolute left-0 top-full hidden group-hover:block w-64 bg-white text-slate-800 rounded-xl shadow-2xl border border-slate-200 py-2 z-50">
-                  <Link to="/academics" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A] font-bold border-b">All Courses Directory</Link>
-                  <Link to="/academics/undergraduate" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">UG Courses (B.Sc / BMS / BAF / B.Com)</Link>
-                  <Link to="/academics/postgraduate" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">PG Courses (M.Sc / M.Com)</Link>
-                  <Link to="/academics/junior-college" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Junior College (XI / XII Science & Comm)</Link>
-                </div>
-              </div>
-
-              {/* Facilities Dropdown */}
-              <div className="relative group py-2">
-                <button className="flex items-center gap-1 px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                  <span>Facilities</span>
-                  <ChevronDown className="w-3.5 h-3.5" />
-                </button>
-                <div className="absolute left-0 top-full hidden group-hover:block w-56 bg-white text-slate-800 rounded-xl shadow-2xl border border-slate-200 py-2 z-50">
-                  <Link to="/campus/facilities/science-laboratory" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Science Lab</Link>
-                  <Link to="/campus/facilities/computer-laboratory" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Computer Lab</Link>
-                  <Link to="/campus/facilities/library" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Central Library</Link>
-                  <Link to="/campus/facilities/conference-hall" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Conference Hall</Link>
-                  <Link to="/campus/facilities/sports-and-gymkhana" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Sports & Gymkhana</Link>
-                  <Link to="/campus/facilities/canteen" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Canteen & Cafeteria</Link>
-                </div>
-              </div>
-
-              <button
-                onClick={() => setIsAdmissionModalOpen(true)}
-                className="px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all cursor-pointer text-left uppercase"
-              >
-                Admission
-              </button>
-
-              {/* Gallery Dropdown */}
-              <div className="relative group py-2">
-                <button className="flex items-center gap-1 px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                  <span>Gallery</span>
-                  <ChevronDown className="w-3.5 h-3.5" />
-                </button>
-                <div className="absolute left-0 top-full hidden group-hover:block w-48 bg-white text-slate-800 rounded-xl shadow-2xl border border-slate-200 py-2 z-50">
-                  <Link to="/gallery" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Image Gallery</Link>
-                  <Link to="/gallery/video" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Video Gallery</Link>
-                </div>
-              </div>
-
-              {/* NAAC Dropdown */}
-              <div className="relative group py-2">
-                <button className="flex items-center gap-1 px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                  <span>NAAC</span>
-                  <ChevronDown className="w-3.5 h-3.5" />
-                </button>
-                <div className="absolute left-0 top-full hidden group-hover:block w-60 bg-white text-slate-800 rounded-xl shadow-2xl border border-slate-200 py-2 z-50">
-                  <Link to="/naac-iqac/iqac" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A] font-bold">IQAC Portal</Link>
-                  <Link to="/naac-iqac/aqar" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">AQAR Reports</Link>
-                  <Link to="/naac-iqac/best-practices" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Best Practices</Link>
-                  <Link to="/naac-iqac/sss" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">SSS Report</Link>
-                  <Link to="/naac-iqac/institutional-distinctiveness" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Distinctiveness</Link>
-                  <Link to="/naac-iqac/academic-calendar" className="block px-4 py-2 hover:bg-blue-50 hover:text-[#1E3A8A]">Academic Calendar</Link>
-                </div>
-              </div>
-
-              <Link to="/careers" className="px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                Careers
-              </Link>
-              <Link to="/downloads" className="px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                Downloads
-              </Link>
-              <Link to="/alumni" className="px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                Alumni
-              </Link>
-              <Link to="/results" className="px-3 py-2.5 rounded-md bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6] text-white font-extrabold transition-all border border-[#93C5FD]/30 shadow-sm">
-                Results 2024-25
-              </Link>
-              <Link to="/contact" className="px-3 py-2.5 rounded-md hover:bg-gradient-to-r hover:from-[#1E3A8A]/90 hover:to-[#3B82F6]/80 hover:text-[#93C5FD] transition-all">
-                Contact
-              </Link>
-            </nav>
-
-            {/* Right Side Buttons */}
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setIsSearchOpen(true)}
-                className="p-2 hover:bg-[#1E3A8A] rounded-lg transition-colors"
-                aria-label="Search"
-              >
-                <Search className="w-4 h-4 text-[#93C5FD]" />
-              </button>
-
-              <button
-                onClick={() => setIsMobileMenuOpen(true)}
-                className="xl:hidden p-2 text-white hover:bg-[#1E3A8A] rounded-lg"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Announcement Section (Positioned Directly Below Navbar with Gradient & Marquee) */}
-      <div className="bg-gradient-to-r from-[#020617] via-[#09132d] to-[#020617] text-slate-100 border-b border-[#1E3A8A] text-xs py-2 px-4 shadow-sm relative z-30">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center gap-3">
-          <div className="flex items-center gap-1.5 bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#3B82F6] text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md tracking-wider shrink-0 shadow-md border border-[#93C5FD]/40">
-            <Flame className="w-3 h-3 text-[#93C5FD] animate-pulse" />
-            <span>Latest Announcements</span>
-          </div>
-          <div className="overflow-hidden relative flex-1 text-xs font-medium text-slate-200">
-            <marquee
-              behavior="scroll"
-              direction="left"
-              scrollamount="6"
-              className="py-0.5 cursor-pointer"
-              onMouseOver={(e) => e.target.stop && e.target.stop()}
-              onMouseOut={(e) => e.target.start && e.target.start()}
-            >
-              <span className="inline-flex items-center gap-6">
-                <Link to="/results" className="hover:text-[#93C5FD] transition-colors inline-flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#3B82F6]"></span>
-                  <span>Results of Academic Year 2024-25 Announced — Check Grade Cards Online!</span>
-                </Link>
-                <span className="text-slate-600">★</span>
+              {/* Mobile Menu Toggle & Mobile Logo */}
+              <div className="flex items-center gap-1 xl:hidden">
                 <button
-                  onClick={() => setIsAdmissionModalOpen(true)}
-                  className="hover:text-white transition-colors inline-flex items-center gap-1.5 text-[#93C5FD] font-bold cursor-pointer"
+                  onClick={() => setIsMobileMenuOpen(true)}
+                  className="p-3 text-[#0f3b73] hover:bg-gray-50 rounded-full transition-colors"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#3B82F6] animate-ping"></span>
-                  <span>Admissions Open 2026-27 (BMS, BAF, B.Sc IT, B.Com, XI & XII Science/Commerce) — Apply Online Now!</span>
+                  <Menu className="w-6 h-6" />
                 </button>
-                <span className="text-slate-600">★</span>
-                <Link to="/notices" className="hover:text-[#93C5FD] transition-colors inline-flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#93C5FD]"></span>
-                  <span>Degree & Junior College Convocation & Annual Sports Registration Notice</span>
+                <Link to="/" className="flex items-center gap-2 pr-2">
+                  <img
+                    src="https://www.grpatilcollegedombivli.in/assets/img/grpclogo.png"
+                    alt="Logo"
+                    className="h-8 w-auto object-contain"
+                  />
+                  <span className="text-[14px] sm:text-[16px] font-black text-[#0f3b73] tracking-tight leading-none">
+                    G.R. PATIL COLLEGE
+                  </span>
                 </Link>
-                <span className="text-slate-600">★</span>
-                <Link to="/academics" className="hover:text-[#93C5FD] transition-colors inline-flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-                  <span>University of Mumbai Examination Hall Ticket & Schedule Published</span>
+              </div>
+
+              {/* Desktop Links */}
+              <div className="hidden xl:flex items-center flex-1 justify-evenly px-4 font-bold text-[#0f3b73] text-[13px]">
+                {[
+                  {
+                    name: 'About',
+                    subItems: [
+                      { name: 'About Institute', path: '/about', font: 'font-extrabold' },
+                      { name: "Founder's Message", path: '/about/founder' },
+                      { name: 'Management', path: '/about/management' },
+                      { name: "Principal's Desk", path: '/about/principal' },
+                      { name: 'Vision & Mission', path: '/about/vision-mission' },
+                    ],
+                    width: 'w-56'
+                  },
+                  {
+                    name: 'Academics',
+                    subItems: [
+                      { name: 'All Courses Directory', path: '/academics', font: 'font-extrabold border-b border-gray-100 pb-2 mb-1' },
+                      { name: 'UG Courses (B.Sc / BMS / BAF / B.Com)', path: '/academics/undergraduate' },
+                      { name: 'PG Courses (M.Sc / M.Com)', path: '/academics/postgraduate' },
+                      { name: 'Junior College (XI / XII Science & Comm)', path: '/academics/junior-college' },
+                    ],
+                    width: 'w-72'
+                  },
+                  {
+                    name: 'Facilities',
+                    subItems: [
+                      { name: 'Science Lab', path: '/campus/facilities/science-laboratory' },
+                      { name: 'Computer Lab', path: '/campus/facilities/computer-laboratory' },
+                      { name: 'Central Library', path: '/campus/facilities/library' },
+                      { name: 'Conference Hall', path: '/campus/facilities/conference-hall' },
+                      { name: 'Sports & Gymkhana', path: '/campus/facilities/sports-and-gymkhana' },
+                      { name: 'Canteen & Cafeteria', path: '/campus/facilities/canteen' },
+                    ],
+                    width: 'w-56'
+                  },
+                  {
+                    name: 'Admission',
+                    onClick: () => setIsAdmissionModalOpen(true),
+                    subItems: []
+                  },
+                  {
+                    name: 'Gallery',
+                    subItems: [
+                      { name: 'Image Gallery', path: '/gallery' },
+                      { name: 'Video Gallery', path: '/gallery/video' },
+                    ],
+                    width: 'w-48'
+                  },
+                  {
+                    name: 'NAAC',
+                    subItems: [
+                      { name: 'IQAC Portal', path: '/naac-iqac/iqac', font: 'font-extrabold' },
+                      { name: 'AQAR Reports', path: '/naac-iqac/aqar' },
+                      { name: 'Best Practices', path: '/naac-iqac/best-practices' },
+                      { name: 'SSS Report', path: '/naac-iqac/sss' },
+                      { name: 'Distinctiveness', path: '/naac-iqac/institutional-distinctiveness' },
+                      { name: 'Academic Calendar', path: '/naac-iqac/academic-calendar' },
+                    ],
+                    width: 'w-60'
+                  },
+                ].map((item) => (
+                  <div key={item.name} className="relative group h-full flex items-center">
+                    <button
+                      onClick={item.onClick}
+                      className="flex items-center gap-1 px-3 py-4 hover:text-[#e5322c] transition-colors"
+                    >
+                      {item.name}
+                      {item.subItems.length > 0 && (
+                        <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
+                      )}
+                    </button>
+                    {item.subItems.length > 0 && (
+                      <div className="absolute top-[100%] left-0 pt-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
+                        <div className={`bg-white shadow-[0_10px_40px_rgb(0,0,0,0.1)] rounded-xl border border-gray-100 py-2 ${item.width}`}>
+                          {item.subItems.map((sub, idx) => (
+                            <Link
+                              key={idx}
+                              to={sub.path}
+                              className={`block px-5 py-2.5 hover:bg-slate-50 hover:text-[#e5322c] transition-colors ${sub.font || 'font-semibold text-slate-700'}`}
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+
+                {/* <Link to="/careers" className="px-3 py-2 hover:text-[#e65c00] transition-colors">Careers</Link> */}
+                <Link to="/downloads" className="px-3 py-2 hover:text-[#e65c00] transition-colors">Downloads</Link>
+                <Link to="/contact" className="hidden xl:block font-bold text-[#0f3b73] text-[13px] px-2 py-2 hover:text-[#e65c00] transition-colors">
+                  Contact
                 </Link>
-              </span>
-            </marquee>
+              </div>
+
+              {/* Right Side Buttons */}
+              <div className="flex items-center gap-3 pr-1">
+                <Link to="/results" className="hidden xl:flex items-center gap-2 border-[#e5322c] border-1 text-[#0f3b73] px-5 py-3 rounded-[24px] font-bold text-[12px] hover:opacity-90 transition-opacity shadow-sm uppercase tracking-wide">
+                  <GraduationCap className="w-4 h-4" />
+                  <span>Results 2024-25</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="w-10 h-10 rounded-full bg-[#eff6ff] text-[#2563eb] flex items-center justify-center hover:bg-[#dbeafe] transition-colors"
+                  aria-label="Search"
+                >
+                  <Search className="w-4 h-4" />
+                </button>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
 
-      {/* Mobile Drawer & Search / Admission Modals */}
       <MobileDrawer isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       <SearchBarModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       <AdmissionModal isOpen={isAdmissionModalOpen} onClose={() => setIsAdmissionModalOpen(false)} />

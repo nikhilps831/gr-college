@@ -42,20 +42,20 @@ export const AdminSidebar = ({ isMobileOpen, onCloseMobile }) => {
   ];
 
   const sidebarContent = (
-    <div className="flex flex-col h-full bg-slate-900 text-slate-300 w-64 border-r border-slate-800">
+    <div className="flex flex-col h-full bg-[#FFF9F0] text-slate-600 w-64 border-r border-slate-800">
       {/* Header */}
       <div className="p-4 border-b border-slate-800 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-amber-400 font-bold shadow-md">
+          <div className="w-9 h-9 rounded-lg bg-red-600 flex items-center justify-center text-[#E39B1B] font-bold shadow-md">
             <GraduationCap className="w-5 h-5" />
           </div>
           <div>
-            <h2 className="text-xs font-black text-white uppercase tracking-wider">GRP COLLEGE</h2>
-            <p className="text-[10px] text-amber-400 font-semibold">Admin CMS Panel</p>
+            <h2 className="text-xs font-black text-slate-800 uppercase tracking-wider">GRP COLLEGE</h2>
+            <p className="text-[10px] text-[#E39B1B] font-semibold">Admin CMS Panel</p>
           </div>
         </div>
         {onCloseMobile && (
-          <button onClick={onCloseMobile} className="lg:hidden p-1 text-slate-400 hover:text-white">
+          <button onClick={onCloseMobile} className="lg:hidden p-1 text-slate-500 hover:text-slate-800">
             <X className="w-5 h-5" />
           </button>
         )}
@@ -73,8 +73,8 @@ export const AdminSidebar = ({ isMobileOpen, onCloseMobile }) => {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
                   isActive
-                    ? 'bg-blue-600 text-white font-bold shadow-md'
-                    : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200'
+                    ? 'bg-red-600 text-white font-bold shadow-md'
+                    : 'text-slate-500 hover:bg-white hover:text-slate-700'
                 }`
               }
             >
@@ -86,20 +86,20 @@ export const AdminSidebar = ({ isMobileOpen, onCloseMobile }) => {
       </nav>
 
       {/* User Info & Logout Footer */}
-      <div className="p-3 border-t border-slate-800 bg-slate-950/60 space-y-2">
+      <div className="p-3 border-t border-slate-800 bg-[#FFF9F0]/60 space-y-2">
         <div className="px-2 py-1.5 flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-blue-900 text-blue-200 border border-blue-700 flex items-center justify-center text-xs font-bold">
+          <div className="w-8 h-8 rounded-full bg-[#FFF9F0] text-red-200 border border-red-700 flex items-center justify-center text-xs font-bold">
             {user?.name?.charAt(0) || 'A'}
           </div>
           <div className="overflow-hidden">
-            <p className="text-xs font-bold text-white truncate">{user?.name || 'Admin User'}</p>
-            <p className="text-[10px] text-slate-400 truncate">{user?.role || 'Administrator'}</p>
+            <p className="text-xs font-bold text-slate-800 truncate">{user?.name || 'Admin User'}</p>
+            <p className="text-[10px] text-slate-500 truncate">{user?.role || 'Administrator'}</p>
           </div>
         </div>
 
         <button
           onClick={handleLogout}
-          className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-rose-600/20 hover:bg-rose-600 text-rose-300 hover:text-white border border-rose-500/30 text-xs font-bold rounded-lg transition-colors"
+          className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-rose-600/20 hover:bg-rose-600 text-rose-300 hover:text-slate-800 border border-rose-500/30 text-xs font-bold rounded-lg transition-colors"
         >
           <LogOut className="w-3.5 h-3.5" />
           <span>Logout Session</span>
@@ -118,7 +118,7 @@ export const AdminSidebar = ({ isMobileOpen, onCloseMobile }) => {
       {/* Mobile Drawer */}
       {isMobileOpen && (
         <div className="fixed inset-0 z-50 lg:hidden flex">
-          <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={onCloseMobile} />
+          <div className="fixed inset-0 bg-[#FFF9F0]/60 backdrop-blur-sm" onClick={onCloseMobile} />
           <div className="relative z-10">{sidebarContent}</div>
         </div>
       )}

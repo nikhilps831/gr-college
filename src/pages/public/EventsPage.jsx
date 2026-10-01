@@ -29,18 +29,18 @@ export const EventsPage = () => {
                 <div>
                   <div className="relative h-48 overflow-hidden">
                     <img src={evt.image} alt={evt.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-900/80 text-amber-300 text-[10px] font-bold uppercase">
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#FFF9F0]/80 text-[#E39B1B] text-[10px] font-bold uppercase">
                       {evt.category}
                     </span>
                   </div>
 
                   <div className="p-5 space-y-3">
-                    <div className="flex items-center gap-2 text-xs font-bold text-blue-900">
-                      <Calendar className="w-4 h-4 text-blue-700" />
+                    <div className="flex items-center gap-2 text-xs font-bold text-red-900">
+                      <Calendar className="w-4 h-4 text-red-700" />
                       <span>{evt.date} ({evt.time})</span>
                     </div>
 
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-900 transition-colors">
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-red-900 transition-colors">
                       {evt.title}
                     </h3>
 
@@ -50,7 +50,7 @@ export const EventsPage = () => {
 
                     <div className="space-y-1.5 pt-2 border-t border-slate-100 text-xs text-slate-500">
                       <div className="flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+                        <MapPin className="w-3.5 h-3.5 text-red-700 shrink-0" />
                         <span className="truncate">{evt.venue}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
@@ -64,7 +64,7 @@ export const EventsPage = () => {
                 <div className="p-5 pt-0 mt-2 border-t border-slate-100">
                   <button
                     onClick={() => alert(`Registration interest logged for ${evt.title}!`)}
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 bg-[#FFF9F0] hover:bg-white text-slate-800 font-bold text-xs rounded-xl transition-colors"
                   >
                     <span>Register / Participate</span>
                     <ArrowRight className="w-3.5 h-3.5" />

@@ -16,7 +16,7 @@ export const ErrorState = ({
       {onRetry && (
         <button
           onClick={onRetry}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold rounded-lg shadow transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 hover:bg-rose-700 text-slate-800 text-xs font-semibold rounded-lg shadow transition-colors"
         >
           <RefreshCw className="w-3.5 h-3.5" />
           <span>Retry Loading</span>

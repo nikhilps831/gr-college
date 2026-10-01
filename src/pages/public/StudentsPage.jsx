@@ -8,7 +8,7 @@ import { Bell, Award, Download, Calendar, BookOpen, Clock, FileText, ArrowRight 
 export const StudentsPage = () => {
   const studentCards = [
     { title: 'Notices & Circulars', path: '/notices', icon: Bell, desc: 'Latest university announcements, holiday notices & exam schedules.', color: 'bg-amber-50 border-amber-200 text-amber-900' },
-    { title: 'Exam Results Portal', path: '/results', icon: Award, desc: 'View regular and ATKT semester exam grade cards.', color: 'bg-blue-50 border-blue-200 text-blue-900' },
+    { title: 'Exam Results Portal', path: '/results', icon: Award, desc: 'View regular and ATKT semester exam grade cards.', color: 'bg-red-50 border-red-200 text-red-900' },
     { title: 'Downloads & Forms', path: '/downloads', icon: Download, desc: 'Railway concession forms, library passes & syllabus PDFs.', color: 'bg-emerald-50 border-emerald-200 text-emerald-900' },
     { title: 'Lecture Timetables', path: '/downloads?cat=Timetable', icon: Clock, desc: 'Download class wise weekly timetables for UG/PG/HSC.', color: 'bg-purple-50 border-purple-200 text-purple-900' },
     { title: 'Academic Calendar', path: '/naac-iqac/academic-calendar', icon: Calendar, desc: 'Term start dates, examination windows & holiday schedule.', color: 'bg-rose-50 border-rose-200 text-rose-900' },
@@ -44,7 +44,7 @@ export const StudentsPage = () => {
                     <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-4 ${card.color}`}>
                       <IconComp className="w-6 h-6" />
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-900 transition-colors mb-2">
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-red-900 transition-colors mb-2">
                       {card.title}
                     </h3>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -52,7 +52,7 @@ export const StudentsPage = () => {
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-4 border-t border-slate-100 text-xs font-bold text-blue-900 flex items-center gap-1 group-hover:text-blue-700">
+                  <div className="pt-4 mt-4 border-t border-slate-100 text-xs font-bold text-red-900 flex items-center gap-1 group-hover:text-red-700">
                     <span>Access Portal</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </div>

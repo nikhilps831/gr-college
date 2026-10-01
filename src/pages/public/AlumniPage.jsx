@@ -84,7 +84,7 @@ export const AlumniPage = () => {
                       <input type="tel" required placeholder="10-digit mobile" className="w-full p-2.5 bg-slate-50 border rounded-xl" />
                     </div>
 
-                    <button type="submit" className="w-full py-3 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl shadow transition-colors flex items-center justify-center gap-2">
+                    <button type="submit" className="w-full py-3 bg-[#FFF9F0] hover:bg-white text-slate-800 font-bold text-xs rounded-xl shadow transition-colors flex items-center justify-center gap-2">
                       <Send className="w-4 h-4" /> Register as Alumni
                     </button>
                   </form>

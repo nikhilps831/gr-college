@@ -26,20 +26,22 @@ export const AcademicTabs = () => {
         />
 
         {/* Tab Navigation Controls */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {tabs.map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => setActiveTab(tab.key)}
-              className={`px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all ${
-                activeTab === tab.key
-                  ? 'bg-blue-900 text-white shadow-lg shadow-blue-900/20 scale-105'
-                  : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className="flex justify-center mb-12 w-full px-2">
+          <div className="inline-flex flex-wrap justify-center bg-white p-2 rounded-[20px] border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] gap-2">
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
+                className={`relative px-6 py-3 rounded-[14px] font-bold text-[13px] tracking-wide transition-all duration-300 ${
+                  activeTab === tab.key
+                    ? 'bg-[#e5322c] text-white shadow-[0_8px_20px_rgb(229,50,44,0.3)] -translate-y-0.5'
+                    : 'bg-transparent text-slate-500 hover:text-[#0f3b73] hover:bg-slate-50'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Course Cards Grid */}
@@ -55,7 +57,7 @@ export const AcademicTabs = () => {
             {filteredCourses.map((course) => (
               <div
                 key={course.id}
-                className="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group hover:border-blue-300"
+                className="bg-white rounded-[24px] border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_12px_30px_rgb(0,0,0,0.08)] transition-all duration-300 flex flex-col justify-between overflow-hidden group hover:border-[#0f3b73]/10 hover:-translate-y-1.5"
               >
                 <div>
                   {/* Featured Card Banner */}
@@ -65,37 +67,37 @@ export const AcademicTabs = () => {
                       alt={course.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900/80 backdrop-blur-md text-amber-300 text-[10px] font-bold uppercase tracking-wider">
-                      <GraduationCap className="w-3.5 h-3.5" />
+                    <div className="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1.5 rounded-[10px] bg-white/95 backdrop-blur-md text-[#0f3b73] text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                      <GraduationCap className="w-3.5 h-3.5 text-[#e5322c]" />
                       <span>{course.stream}</span>
                     </div>
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-5 space-y-3">
-                    <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
-                      <Clock className="w-3.5 h-3.5 text-blue-700" />
+                  <div className="p-6 space-y-3">
+                    <div className="flex items-center gap-2 text-xs text-slate-500 font-bold tracking-wide">
+                      <Clock className="w-3.5 h-3.5 text-[#209d2e]" />
                       <span>{course.duration}</span>
                     </div>
 
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-900 transition-colors line-clamp-1">
+                    <h3 className="text-[17px] font-extrabold text-[#0f3b73] group-hover:text-[#e5322c] transition-colors line-clamp-1">
                       {course.name}
                     </h3>
 
-                    <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                    <p className="text-[13px] text-slate-500 font-medium leading-relaxed line-clamp-3">
                       {course.shortDescription}
                     </p>
                   </div>
                 </div>
 
                 {/* Card Footer */}
-                <div className="p-5 pt-0 mt-2 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] font-semibold text-slate-500">
+                <div className="p-6 pt-0 mt-2 flex items-center justify-between">
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">
                     Intake: {course.intake} seats
                   </span>
                   <Link
                     to={`/academics/course/${course.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-900 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0f3b73] hover:text-white bg-slate-50 hover:bg-[#0f3b73] px-4 py-2 rounded-[12px] transition-colors border border-gray-100 hover:border-[#0f3b73]"
                   >
                     <span>View Course</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -107,13 +109,13 @@ export const AcademicTabs = () => {
         </AnimatePresence>
 
         {/* View All Programs CTA */}
-        <div className="mt-12 text-center">
+        <div className="mt-14 text-center">
           <Link
             to="/academics"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shadow-md transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-[16px] bg-[#e5322c] hover:bg-[#c92722] text-white text-[13px] font-bold shadow-[0_8px_30px_rgb(229,50,44,0.2)] transition-colors"
           >
             <span>View All Detailed Syllabi & Electives</span>
-            <ArrowRight className="w-4 h-4 text-amber-400" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

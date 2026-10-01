@@ -44,11 +44,12 @@ export const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-200/80">
+    <section className="py-16 lg:py-24 bg-[#f8f9fa] border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           badge="Institutional Strengths"
           title="Why Choose G.R. Patil College?"
+          className="text-[#0f3b73]"
           subtitle="Empowering your academic journey through comprehensive infrastructure, expert mentorship, and industry-aligned skill building."
         />
 
@@ -62,13 +63,13 @@ export const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                className="bg-white rounded-[24px] p-7 border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1.5"
               >
-                <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-4 ${item.color}`}>
-                  <IconComponent className="w-6 h-6" />
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-sm ${item.color}`}>
+                  <IconComponent className="w-7 h-7" />
                 </div>
-                <h3 className="text-base font-bold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-extrabold text-[#0f3b73] mb-3">{item.title}</h3>
+                <p className="text-[13px] text-slate-500 font-medium leading-relaxed">{item.description}</p>
               </motion.div>
             );
           })}
