@@ -6,10 +6,10 @@ import { Play, Video } from 'lucide-react';
 
 export const VideoGalleryPage = () => {
   const videos = [
-    { title: 'Degree Convocation Ceremony & Graduation Day', category: 'Convocation', duration: '12:45', thumbnail: 'https://www.grpatilcollegedombivli.in/assets/img/convocation-1.jpg' },
-    { title: 'Annual Cultural Carnival Tarang Highlights', category: 'Cultural', duration: '08:30', thumbnail: 'https://www.grpatilcollegedombivli.in/assets/img/photo_gallery/Cultural%20Activities/full/guit.jpg' },
-    { title: 'Computer & IT Department Industrial Visit Documentary', category: 'Academic', duration: '15:20', thumbnail: 'https://www.grpatilcollegedombivli.in/assets/img/industrial-visit-1.jpg' },
-    { title: 'NSS Green Campus Plantation & Swachhta Campaign', category: 'NSS', duration: '06:15', thumbnail: 'https://www.grpatilcollegedombivli.in/assets/img/other-activity.jpg' }
+    { title: 'Degree Convocation Ceremony & Graduation Day', category: 'Convocation', duration: '12:45', thumbnail: '/images/gallery/convocation-1.jpg' },
+    { title: 'Annual Cultural Carnival Tarang Highlights', category: 'Cultural', duration: '08:30', thumbnail: '/images/gallery/cultural/guit.jpg' },
+    { title: 'Computer & IT Department Industrial Visit Documentary', category: 'Academic', duration: '15:20', thumbnail: '/images/gallery/industrial-visit-1.jpg' },
+    { title: 'NSS Green Campus Plantation & Swachhta Campaign', category: 'NSS', duration: '06:15', thumbnail: '/images/gallery/other-activity.jpg' }
   ];
 
   return (

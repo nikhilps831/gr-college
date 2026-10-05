@@ -35,7 +35,7 @@ export const COURSES = [
       { question: 'Is Mathematics mandatory in 12th for B.Sc CS?', answer: 'Yes, as per University of Mumbai guidelines, passing 12th Science with Mathematics is mandatory.' },
       { question: 'Does the college provide placement assistance for B.Sc CS?', answer: 'Yes, our active Placement Cell conducts campus placement drives, technical training workshops, and internship assistance with leading IT firms.' }
     ],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/industrial-visit-1.jpg'
+    featuredImage: '/images/gallery/industrial-visit-1.jpg'
   },
   {
     id: 'bsc-it',
@@ -68,7 +68,7 @@ export const COURSES = [
     faqs: [
       { question: 'Can Commerce students apply for B.Sc IT?', answer: 'Yes, Commerce students with Mathematics in 12th HSC are eligible.' }
     ],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/industrial-visit-2.jpg'
+    featuredImage: '/images/gallery/industrial-visit-2.jpg'
   },
   {
     id: 'bms',
@@ -99,7 +99,7 @@ export const COURSES = [
     faqs: [
       { question: 'Are specialization electives offered in BMS?', answer: 'Yes, students choose specializations in Marketing, Finance, or Human Resource Management in the 2nd and 3rd year.' }
     ],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/convocation-1.jpg'
+    featuredImage: '/images/gallery/convocation-1.jpg'
   },
   {
     id: 'baf',
@@ -121,7 +121,7 @@ export const COURSES = [
       { semester: 'Semester I', subjects: ['Financial Accounting - I', 'Cost Accounting - I', 'Financial Management - I', 'Business Communication - I', 'Foundation Course - I'] }
     ],
     faqs: [{ question: 'Is BAF helpful for CA aspirants?', answer: 'Extremely helpful! The BAF curriculum closely aligns with CA Foundation and Intermediate subjects.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/convocation-2.jpg'
+    featuredImage: '/images/gallery/convocation-2.jpg'
   },
   {
     id: 'bbi',
@@ -141,7 +141,7 @@ export const COURSES = [
     careerOpportunities: ['Bank Probationary Officer', 'Insurance Underwriter', 'Wealth Advisor', 'Risk Analyst', 'Loan Officer'],
     curriculum: [{ semester: 'Semester I', subjects: ['Environment & Management of Financial Services', 'Principles of Banking', 'Financial Accounting', 'Business Law'] }],
     faqs: [{ question: 'Does BBI include practical banking training?', answer: 'Yes, includes banking operations simulation, software training, and guest sessions by senior bankers.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/convocation-3.jpg'
+    featuredImage: '/images/gallery/convocation-3.jpg'
   },
   {
     id: 'bcom',
@@ -161,7 +161,7 @@ export const COURSES = [
     careerOpportunities: ['Accountant', 'Commercial Manager', 'Government Services aspirant', 'Corporate Administrator'],
     curriculum: [{ semester: 'Semester I', subjects: ['Accountancy & Financial Management', 'Commerce - I', 'Business Economics', 'Environmental Studies'] }],
     faqs: [{ question: 'Is distance education or regular?', answer: 'It is a full-time regular degree affiliated to University of Mumbai.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/photo_gallery/NAAC/full/item3.jpg'
+    featuredImage: '/images/gallery/naac/item3.jpg'
   },
   {
     id: 'bammc',
@@ -181,7 +181,7 @@ export const COURSES = [
     careerOpportunities: ['Journalist / News Reporter', 'Digital Media Manager', 'Copywriter / Content Strategist', 'PR Executive', 'Video Editor'],
     curriculum: [{ semester: 'Semester I', subjects: ['Effective Communication', 'Foundation Course', 'Visual Communication', 'Fundamentals of Mass Communication'] }],
     faqs: [{ question: 'Does BAMMC focus on Journalism or Advertising?', answer: 'Students choose between Journalism or Advertising specialization in the 3rd year.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/photo_gallery/Cultural%20Activities/full/guit.jpg'
+    featuredImage: '/images/gallery/cultural/guit.jpg'
   },
   {
     id: 'bsc-hospitality',
@@ -201,7 +201,7 @@ export const COURSES = [
     careerOpportunities: ['Hotel Operations Executive', 'F&B Manager', 'Front Desk Officer', 'Event Planner', 'Cabin Crew'],
     curriculum: [{ semester: 'Semester I', subjects: ['Food Production - I', 'Food & Beverage Service - I', 'Front Office Operations', 'Housekeeping'] }],
     faqs: [{ question: 'Is industrial hotel internship included?', answer: 'Yes, 5 months compulsory industrial training in 5-star hotels is part of the curriculum.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/other-activity.jpg'
+    featuredImage: '/images/gallery/other-activity.jpg'
   },
 
   // --- POSTGRADUATE (PG) ---
@@ -223,7 +223,7 @@ export const COURSES = [
     careerOpportunities: ['Senior Software Architect', 'Data Scientist', 'AI / ML Specialist', 'Research Scientist', 'University Lecturer'],
     curriculum: [{ semester: 'Semester I', subjects: ['Advanced Data Structures', 'Advanced Computer Networks', 'Data Science & Big Analytics', 'Research Methodology'] }],
     faqs: [{ question: 'Does M.Sc CS require entrance exam?', answer: 'Admissions are based on B.Sc merit marks and University of Mumbai pre-admission registration guidelines.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/industrial-visit-1.jpg'
+    featuredImage: '/images/gallery/industrial-visit-1.jpg'
   },
   {
     id: 'msc-it',
@@ -243,7 +243,7 @@ export const COURSES = [
     careerOpportunities: ['Enterprise Architect', 'Information Security Officer', 'Product Manager', 'Cloud Architect'],
     curriculum: [{ semester: 'Semester I', subjects: ['Research in Computing', 'Cloud Computing Technologies', 'Cyber & Information Security', 'Soft Computing Techniques'] }],
     faqs: [{ question: 'Are practical labs equipped with modern servers?', answer: 'Yes, our High-Performance Computing lab features modern server hardware and high-speed internet.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/industrial-visit-2.jpg'
+    featuredImage: '/images/gallery/industrial-visit-2.jpg'
   },
   {
     id: 'mcom',
@@ -263,7 +263,7 @@ export const COURSES = [
     careerOpportunities: ['Senior Accountant', 'Auditor', 'Financial Analyst', 'College Assistant Professor'],
     curriculum: [{ semester: 'Semester I', subjects: ['Strategic Management', 'Economics of Global Trade', 'Advanced Financial Accounting', 'Cost & Management Accounting'] }],
     faqs: [{ question: 'Is M.Com eligible for SET/NET exams?', answer: 'Yes, M.Com post-graduates with 55% marks are eligible for NET/SET exams for assistant professor lectureship.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/convocation-1.jpg'
+    featuredImage: '/images/gallery/convocation-1.jpg'
   },
 
   // --- JUNIOR COLLEGE ---
@@ -288,7 +288,7 @@ export const COURSES = [
       { semester: 'XII Science (SYJC / HSC)', subjects: ['English', 'Physics', 'Chemistry', 'Mathematics & Statistics', 'Biology / CS Bifocal / Electronics', 'Physical Education'] }
     ],
     faqs: [{ question: 'Are IT, CS, and Electronics bifocal options available?', answer: 'Yes! Bifocal Computer Science, IT, and Electronics options are available based on SSC merit.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/1920x800/slider2.jpg'
+    featuredImage: '/images/sliders/slider2.jpg'
   },
   {
     id: 'junior-commerce',
@@ -309,6 +309,6 @@ export const COURSES = [
       { semester: 'XI Commerce (FYJC)', subjects: ['English', 'Book-keeping & Accountancy', 'Organization of Commerce & Management', 'Secretarial Practice / Maths', 'Economics', 'Information Technology / Marathi / Hindi'] }
     ],
     faqs: [{ question: 'Can students choose Secretarial Practice instead of Maths?', answer: 'Yes, students can select either Secretarial Practice (SP) or Mathematics & Statistics.' }],
-    featuredImage: 'https://www.grpatilcollegedombivli.in/assets/img/photo_gallery/Youth%20Sports/full/jio_f4.jpg'
+    featuredImage: '/images/gallery/sports/jio_f4.jpg'
   }
 ];

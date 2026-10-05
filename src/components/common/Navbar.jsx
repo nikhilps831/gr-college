@@ -54,12 +54,72 @@ export const Navbar = () => {
       </div>
 
       {/* Main Header Section */}
-      <div className="bg-white pt-4 pb-12 sm:pb-14 lg:pb-16 px-4 sm:px-6 lg:px-8 relative z-40">
-        <div className="max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-between gap-6">
+      <div className="bg-white pt-4 pb-12 sm:pb-14 lg:pb-16 px-4 sm:px-6 lg:px-8 relative z-40 overflow-hidden">
+        {/* Decorative Swooping Curves Background Graphic */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <svg
+            className="absolute bottom-0 left-0 w-full h-full"
+            viewBox="0 0 1440 200"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Main orange swooping curve - left to center */}
+            <path
+              d="M0,120 C200,60 400,30 600,80 C800,130 1000,90 1200,60 L1440,40 L1440,200 L0,200 Z"
+              fill="#E39B1B"
+              opacity="0.07"
+            />
+            {/* Secondary green swooping curve - center to right */}
+            <path
+              d="M0,160 C300,100 500,70 750,100 C1000,130 1200,70 1440,50 L1440,200 L0,200 Z"
+              fill="#8FB622"
+              opacity="0.08"
+            />
+            {/* Thin accent orange line sweep */}
+            <path
+              d="M0,140 C250,80 500,55 700,90 C900,125 1100,80 1440,55"
+              fill="none"
+              stroke="#E39B1B"
+              strokeWidth="2"
+              opacity="0.15"
+            />
+            {/* Thin accent green line sweep */}
+            <path
+              d="M0,170 C350,110 600,85 800,110 C1050,140 1250,85 1440,65"
+              fill="none"
+              stroke="#8FB622"
+              strokeWidth="2"
+              opacity="0.15"
+            />
+            {/* Top-left subtle orange arc */}
+            <path
+              d="M0,50 C150,20 350,10 550,40 C750,70 900,55 1050,35 L1050,35"
+              fill="none"
+              stroke="#E39B1B"
+              strokeWidth="1.5"
+              opacity="0.1"
+            />
+            {/* Faint wide orange fill at top-left */}
+            <path
+              d="M0,80 C200,30 450,15 650,50 C850,85 1000,60 1150,40 L1440,25 L1440,200 L0,200 Z"
+              fill="url(#headerGradientSweep)"
+              opacity="0.04"
+            />
+            <defs>
+              <linearGradient id="headerGradientSweep" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#E39B1B" />
+                <stop offset="50%" stopColor="#d4a830" />
+                <stop offset="100%" stopColor="#8FB622" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-between gap-6 relative z-10">
           {/* Logo & Official Title */}
           <Link to="/" className="flex items-center gap-4 group">
             <img
-              src="https://www.grpatilcollegedombivli.in/assets/img/grpclogo.png"
+              src="/images/logo/grpclogo.png"
               alt="G.R. Patil College Logo"
               className="h-16 md:h-20 w-auto object-contain"
             />
@@ -112,7 +172,7 @@ export const Navbar = () => {
                   }`}
               >
                 <img
-                  src="https://www.grpatilcollegedombivli.in/assets/img/grpclogo.png"
+                  src="/images/logo/grpclogo.png"
                   alt="Logo"
                   className="h-9 w-auto object-contain shrink-0"
                 />
@@ -131,7 +191,7 @@ export const Navbar = () => {
                 </button>
                 <Link to="/" className="flex items-center gap-2 pr-2">
                   <img
-                    src="https://www.grpatilcollegedombivli.in/assets/img/grpclogo.png"
+                    src="/images/logo/grpclogo.png"
                     alt="Logo"
                     className="h-8 w-auto object-contain"
                   />

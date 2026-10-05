@@ -18,7 +18,7 @@ export const AboutSection = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100">
               <img
-                src="https://www.grpatilcollegedombivli.in/assets/img/1920x800/slider2.jpg"
+                src="/images/sliders/slider2.jpg"
                 alt="G.R. Patil College Campus & Students"
                 className="w-full h-[400px] sm:h-[480px] object-cover hover:scale-105 transition-transform duration-700"
               />

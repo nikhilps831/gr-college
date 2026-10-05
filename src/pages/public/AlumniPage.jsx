@@ -26,7 +26,7 @@ export const AlumniPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div className="lg:col-span-7 space-y-6">
               <img
-                src="https://www.grpatilcollegedombivli.in/assets/img/convocation-1.jpg"
+                src="/images/gallery/convocation-1.jpg"
                 alt="Alumni Convocation"
                 className="w-full h-80 object-cover rounded-3xl shadow-lg border border-slate-200"
               />

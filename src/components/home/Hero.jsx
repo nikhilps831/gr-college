@@ -9,7 +9,7 @@ export const Hero = () => {
       {/* Background Image & Overlays */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat xl:bg-right"
-        style={{ backgroundImage: `url('https://www.grpatilcollegedombivli.in/assets/img/1920x800/home-slider-2.jpg')` }}
+        style={{ backgroundImage: `url('/images/sliders/home-slider-2.jpg')` }}
       />
       {/* White gradient fading to transparent on the right */}
       <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent/10" />
